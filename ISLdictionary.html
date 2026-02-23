@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA - ISL Dictionary</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden">
+    <!-- Left Sidebar -->
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage_v2.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark h-screen overflow-hidden">
+        <!-- Header Section -->
+        <header
+            class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-8 py-6 flex flex-col gap-6 shrink-0 z-20 shadow-sm">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">ISL Dictionary</h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1">Browse and learn standard Indian Sign Language
+                        vocabulary</p>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button
+                        class="p-2 text-slate-400 hover:text-primary transition-colors rounded-full hover:bg-slate-50 dark:hover:bg-slate-800"
+                        title="Help">
+                        <span class="material-symbols-outlined">help</span>
+                    </button>
+                    <button
+                        class="p-2 text-slate-400 hover:text-primary transition-colors rounded-full hover:bg-slate-50 dark:hover:bg-slate-800"
+                        title="Notifications">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-4 items-center">
+                <!-- Search Bar -->
+                <div class="relative flex-1 max-w-2xl">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <span class="material-symbols-outlined text-slate-400">search</span>
+                    </div>
+                    <input
+                        class="block w-full pl-10 pr-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg leading-5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm transition-shadow shadow-sm"
+                        placeholder="Search for a word (e.g., Family, Water, School)..." type="text" />
+                    <div class="absolute inset-y-0 right-0 pr-2 flex items-center">
+                        <span
+                            class="text-xs text-slate-400 bg-white dark:bg-slate-700 px-2 py-1 rounded border border-slate-200 dark:border-slate-600">⌘
+                            K</span>
+                    </div>
+                </div>
+                <!-- Filters -->
+                <div class="flex gap-2 shrink-0">
+                    <button
+                        class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm transition-colors">
+                        <span class="material-symbols-outlined text-lg">sort_by_alpha</span>
+                        A-Z
+                    </button>
+                    <button
+                        class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm transition-colors">
+                        <span class="material-symbols-outlined text-lg">category</span>
+                        Categories
+                    </button>
+                </div>
+            </div>
+            <!-- Quick Category Tags -->
+            <div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+                <button
+                    class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors whitespace-nowrap">All
+                    Words</button>
+                <button
+                    class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium border border-transparent hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">Greetings</button>
+                <button
+                    class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium border border-transparent hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">Family</button>
+                <button
+                    class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium border border-transparent hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">School</button>
+                <button
+                    class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium border border-transparent hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">Emotions</button>
+                <button
+                    class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium border border-transparent hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">Actions</button>
+            </div>
+        </header>
+        <!-- Content Split View -->
+        <div class="flex flex-1 overflow-hidden">
+            <!-- Left: Grid Results -->
+            <div class="flex-1 overflow-y-auto p-6 md:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 1: Family -->
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border-2 border-primary/50 shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200">
+                        <div class="absolute top-2 right-2 z-10">
+                            <span class="material-symbols-outlined filled text-primary">check_circle</span>
+                        </div>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative overflow-hidden">
+                            <img alt="3D avatar demonstrating the sign for Family"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD04a5v4sriam2rOxUlQqHz0MnS8CRzWF3XIl8VJxNc2mG0VXacU6h-JziFZ0atgFvMHSo4MgJuDayOe-CofdzXXQzJ-K4nMmjYR_YqP4LzwD5tARgYin5WkDQDVUniMCgX8q97HmXNF2cRVNNVWdW6CsW8Al7D9FMg9M5fDXrJAOPunHOuB7H85R1vseZAU46fhbriJm6SSGfnjs70DHb3IOsZdEWnTqqRAeQ-_OPiQjKYq0QpaU7BAvz40fbz5diiWG7k8CiHFqVm" />
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4 bg-primary/5 dark:bg-slate-800/50">
+                            <h3
+                                class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Family</h3>
+                            <p class="text-xs text-slate-500 mt-1">Core Vocabulary</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Water -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Water"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPRah1RPAbjQYyhS-1BYdndiOXSMcV8MDnVW_e8c2DMsGy10CaBiqCYvaMq2mLNvxhwPld7_k86AiWUneXRA6V5cEBMMW2dUi3xYH_7ZoS3_2VljHgZTsQNwtV85wIGnoaXIqMaDEtNMkStAJd4UmpFLGEaB-b7uMmyprSvNyi_BtoKuScLgNFLSCXm7ogE2PjwLR0CGepQfZwxwb3k6oIFLF_i1gQKj5FLrM9lEUvE9Yg42Hsq7cr8VAkBV3KKtbm1s9TfhFtLUfP" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Water</h3>
+                            <p class="text-xs text-slate-500 mt-1">Basic Needs</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: School -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for School"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5rpXlFS_LDUwjZgJV_roZd1mWon9qvPo4py74YvrWi_xo2VFFmyVd0jAlVk47SQdQhaxeQAvP_LjZot4Z05AP_KSsRbBKb0qyq4ZaSfxVjncUlUxb78H0Qy4PDJtqWm1-x6zEZHhfoUbn46YmW5RoZttY4LvhSw4PlG96QpLI7luCjPzdXeUp5yE7wkZKp_6lULmyocVMgFZm66EzfDS-yTXE72NBPI_Iy0v9YbcR83B1pgSnOtMDGPiHA-bIzbLdmJDPtiLp47yO" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                School</h3>
+                            <p class="text-xs text-slate-500 mt-1">Places</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Hello -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Hello"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_U4McHGmfOCgttmVo3gM2QfoQdJWKwfAiwCjATkCY4Ir9Cw67_3-VDCK4N6M5x8LlHEQ0X-BbKm9WhAFqxcWcvO7xqitSCmMXfAvxABjaQzZspLmLGsek9yoxugrncf2k5YRMTK9KMOg1qFyBmSP0qqxHKEQIRBS5YPPOMWmzCYL3LA-oNFYyx3WPTyyjaB0EUV-bIvamlVdNox9uTUDSZlhBpJxHrF3GubOpXxlGO4uSFX8e_8g1BKkbQcuWMsg3X9r-i0G2AOI" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Greeting</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Hello</h3>
+                            <p class="text-xs text-slate-500 mt-1">Common Phrases</p>
+                        </div>
+                    </div>
+                    <!-- Card 5: Thank You -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Thank You"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzH9nn0kSFvcX65qvkXXOe-z16KiaWCHom2EMy2OWMM2rQAeS9HIqlTd9tfVnVHR40bzQ8d-9_9BHvexC4lTHxDtrM05rktc0H-7_kZmKnd4tp822QqsVuhGNVL9nzdA32GmFhsKtUhp7kaEONppV1Z0GhKSwWlgL5ibYydl3h6Rgww25raiztlsaD22lBFflRUwGgXrjpMNLUKnE9OaFn6ZmF4xAKVIZ9dcLpxZ1JkOjtbn60xkE57S9LJuIzq3qHeyB9vJLTjIGY" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Phrase</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Thank You</h3>
+                            <p class="text-xs text-slate-500 mt-1">Politeness</p>
+                        </div>
+                    </div>
+                    <!-- Card 6: Help -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Help"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6pXxwTa04b4A8m2MPMFX7WNLfAELn5Xcq5M2KD3lhippsMtCenApKuzbHyvTBwiWQx1-9cWCrHt5naxizKcVwCuuV7UVAgRYA0bQNUYezSSGUMXIcWax6LMDltgLlG-T2S6Q6I-fpkExC4rqKlYo7FFaOk4rtUC7z6_sGMkFj9dppD19zpU0UtduBdt9Rl9xvZBj09d2UeAMDGoG6daJDUGf-gCjB2fNwp0EuGk0PbosqiIDJWSbvWYQvUSuOnAQXlUZMz11tNTHM" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Verb</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Help</h3>
+                            <p class="text-xs text-slate-500 mt-1">Actions</p>
+                        </div>
+                    </div>
+                    <!-- Card 7: Friend -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Friend"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYJHqwYu4U96AmKP3V4suqKxQ_64clf2ZrHNo_v_qQ7q5uIWXjYGOza4OeZR3v8zITycylLCelRuR-QcAnEWmdMqSNtrD-9GVk5o8NozOYSaPbS_ywn3vS3Vq5n3T5ULncqIgk2D6p9hTybJeYYYb5W7Ft6LIZdqWBd4vGlipHB_w5Oa6J2dhhX1TtK7enSNymfVNV7kVHK7sIaxk6Hpo5vx69gvMSj7gsGneOhV_5ntTy377PmNrwQoVAKqLgLstewFLqNrtvdYhu" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Friend</h3>
+                            <p class="text-xs text-slate-500 mt-1">Relationships</p>
+                        </div>
+                    </div>
+                    <!-- Card 8: Time -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Time"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6CLHRm9JP5f_LSrSMaaQvySdrfLT19hmRGNlAFMO87isoiza_gameJpKbZCcTanCnYL8Jj8dB8lQQrQOD1tTGOGJA-e1F9vOgF5eOqHkCiuczNWYnskrwZ3dpzkL_jIJeYxhJG5cIcUjdKOoz6I_KeiNEgdO-s-lWf7Invj8OoA5jZd7h4MWvY9m99iAn_Ktb9Fy869lonM4jdjFphaVe1ry_aw45BJX7pne7D28Hg6whxR5rnGYdxLDcF76Y3dZ5EQm6V8RXxpUM" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Concept</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Time</h3>
+                            <p class="text-xs text-slate-500 mt-1">Abstract</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Detail Panel (Sticky) -->
+            <div
+                class="w-[400px] border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-y-auto flex-shrink-0 hidden xl:flex flex-col shadow-[-4px_0_15px_-3px_rgba(0,0,0,0.05)]">
+                <!-- Video Section -->
+                <div class="p-6 pb-4">
+                    <div
+                        class="aspect-[4/3] rounded-2xl bg-slate-900 relative overflow-hidden shadow-lg border-2 border-slate-100 dark:border-slate-700 group">
+                        <!-- Large Video Placeholder -->
+                        <img alt="Detail view of 3D avatar performing sign for Family"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFUZoqc1wTLZKf0g-3mJVNZlWSha1RU2mKAWd9W2FoJZWptzEFKxlaHk0Hiq38wSGopQwGel__sWuax8o5XWK8iSbeH2G9XHJ3tOWL3l6wbGOELPvF4xQk5P2q101FC-Wrw8FaGWgjUjGH7KAxuJjnWEqwg23Y1JXNiiwZ0VXMdEJ5kxhypFa1QzitIpNpxfBJbUlAPXZQvL7E5Putm_gTbKmgQeN5zjNJRw8nII1q8dI2ZW2uC8sCsAq-9NWwag1ynwGezFOOygg" />
+                        <!-- Overlay Controls -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button
+                                class="bg-primary/90 text-white rounded-full p-4 hover:scale-110 hover:bg-primary transition-all shadow-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-4xl filled">play_arrow</span>
+                            </button>
+                        </div>
+                        <!-- Speed Control Badge -->
+                        <div class="absolute bottom-4 right-4 flex gap-2">
+                            <button
+                                class="bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm hover:bg-black/70 transition">0.5x</button>
+                            <button
+                                class="bg-primary text-white text-xs px-2 py-1 rounded backdrop-blur-sm font-bold">1.0x</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="flex gap-2">
+                            <button
+                                class="flex items-center gap-1 text-slate-500 hover:text-primary transition-colors text-sm font-medium p-1">
+                                <span class="material-symbols-outlined text-[20px]">replay</span>
+                                Replay
+                            </button>
+                            <button
+                                class="flex items-center gap-1 text-slate-500 hover:text-primary transition-colors text-sm font-medium p-1">
+                                <span class="material-symbols-outlined text-[20px]">slow_motion_video</span>
+                                Slow
+                            </button>
+                        </div>
+                        <button class="text-slate-400 hover:text-red-500 transition-colors p-1">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Info Section -->
+                <div class="px-6 pb-8 flex flex-col gap-6">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-4xl font-bold text-slate-900 dark:text-white">Family</h2>
+                                <span class="inline-block mt-1 text-sm font-mono text-slate-400">/ˈfæm.əl.i/ •
+                                    Noun</span>
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs px-2 py-1 rounded font-medium border border-green-200 dark:border-green-800">Verified</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide">
+                            Definition</h4>
+                        <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                            A group of one or more parents and their children living together as a unit. In ISL, this is
+                            represented by the 'F' handshapes circling horizontally.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <h4
+                            class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary">format_quote</span> Usage
+                            Example
+                        </h4>
+                        <p class="text-slate-600 dark:text-slate-300 italic">"I love my <strong
+                                class="text-primary font-medium">family</strong> very much."</p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Related
+                            Signs</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors"
+                                href="#">Mother</a>
+                            <a class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors"
+                                href="#">Father</a>
+                            <a class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors"
+                                href="dashboard.html">Home</a>
+                            <a class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors"
+                                href="#">Relative</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer of Detail Panel -->
+                <div
+                    class="mt-auto p-6 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800">
+                    <button
+                        class="w-full py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">bug_report</span>
+                        Report Issue with Sign
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA User Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "primary-light": "#eef6ff",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-slate-900 min-h-screen flex overflow-hidden">
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage_v2.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <main class="flex-1  relative min-h-screen overflow-y-auto">
+        <header
+            class="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-slate-800 lg:hidden">Profile</h1>
+            <div class="hidden lg:block"></div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-blue-200 transition-colors relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
+                </button>
+                <button
+                    class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-blue-200 transition-colors">
+                    <span class="material-symbols-outlined">help</span>
+                </button>
+            </div>
+        </header>
+        <div class="p-6 lg:p-10 max-w-7xl mx-auto space-y-8">
+            <section class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-5">
+                    <span class="material-symbols-outlined text-[200px] leading-none text-primary">verified</span>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                    <div class="relative group">
+                        <div
+                            class="w-32 h-32 lg:w-40 lg:h-40 rounded-full p-1 bg-gradient-to-tr from-blue-400 to-indigo-500 shadow-xl">
+                            <img alt="Soumya Profile"
+                                class="w-full h-full object-cover rounded-full border-4 border-white"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd6LV6JCmiss_j0UspcfcxA_pse0DqXySwkzH3CdmF9AEeApnxK2Wo2U9emyCVLbv4hyl_UaYfVbod5gTH6VnlCnqrKK9AdDYhJSN1BbzFjCbiaLWfbs61ZT7vo4b0XAdzRGVz-3vFQEwzYlmhICBkjOvgeulJK2V7HSeQZncxTgOzn3ummtfMDhmVOdyO-aCqQksvmjB2jnAD3B9fWvQ0mwDVzmQvZxVBktQ7AFq-MtRyeat-6xmtoO69biuTbH4zCqdEE_oDXj_B" />
+                        </div>
+                        <button
+                            class="absolute bottom-2 right-2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-slate-600 hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-xl">edit</span>
+                        </button>
+                    </div>
+                    <div class="flex-1 text-center md:text-left space-y-4 w-full">
+                        <div>
+                            <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">Soumya</h2>
+                            <p class="text-slate-500 font-medium text-lg">Indian Sign Language Enthusiast</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 max-w-2xl">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-primary font-bold tracking-wide uppercase text-sm">Level 12 - Sign
+                                    Master</span>
+                                <span class="text-slate-400 font-bold text-xs">2400 / 3000 XP</span>
+                            </div>
+                            <div class="h-3 w-full bg-slate-200 rounded-full overflow-hidden">
+                                <div
+                                    class="h-full bg-primary rounded-full w-[80%] shadow-[0_0_10px_rgba(43,124,238,0.4)]">
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-2">600 XP to Level 13</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-blue-500/20 transition-all active:scale-95 flex items-center gap-2">
+                            <span class="material-symbols-outlined">share</span>
+                            Share Profile
+                        </button>
+                        <button
+                            class="bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-3 px-6 rounded-xl transition-all active:scale-95">
+                            Edit Details
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">sign_language</span>
+                    </div>
+                    <div>
+                        <p class="text-slate-500 text-sm font-semibold">Total Signs</p>
+                        <p class="text-2xl font-black text-slate-900">482</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl fill-1">local_fire_department</span>
+                    </div>
+                    <div>
+                        <p class="text-slate-500 text-sm font-semibold">Streak Days</p>
+                        <p class="text-2xl font-black text-slate-900">14</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">public</span>
+                    </div>
+                    <div>
+                        <p class="text-slate-500 text-sm font-semibold">Global Rank</p>
+                        <p class="text-2xl font-black text-slate-900">#420</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">bolt</span>
+                    </div>
+                    <div>
+                        <p class="text-slate-500 text-sm font-semibold">Total XP</p>
+                        <p class="text-2xl font-black text-slate-900">12.4k</p>
+                    </div>
+                </div>
+            </section>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <section class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-slate-800">Achievements</h3>
+                        <a class="text-primary font-bold text-sm hover:underline" href="#">View All</a>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div
+                            class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center text-center gap-3 transition-transform hover:-translate-y-1 duration-300">
+                            <div
+                                class="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-100 to-orange-100 border-4 border-white shadow-md flex items-center justify-center mb-1 relative overflow-hidden">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-orange-500 z-10 fill-1">school</span>
+                                <div class="absolute inset-0 bg-yellow-400/10 rotate-45 scale-150"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">First Lesson</h4>
+                                <p class="text-xs text-slate-500 mt-1">Completed first ISL module</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Earned</div>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center text-center gap-3 transition-transform hover:-translate-y-1 duration-300">
+                            <div
+                                class="w-20 h-20 rounded-full bg-gradient-to-br from-red-100 to-pink-100 border-4 border-white shadow-md flex items-center justify-center mb-1 relative overflow-hidden">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-red-500 z-10 fill-1">fitness_center</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">7 Day Warrior</h4>
+                                <p class="text-xs text-slate-500 mt-1">Maintained a 7-day streak</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Earned</div>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center text-center gap-3 transition-transform hover:-translate-y-1 duration-300">
+                            <div
+                                class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 border-4 border-white shadow-md flex items-center justify-center mb-1 relative overflow-hidden">
+                                <span class="material-symbols-outlined text-4xl text-cyan-600 z-10">psychology</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Quiz Master</h4>
+                                <p class="text-xs text-slate-500 mt-1">Scored 100% in 5 quizzes</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Earned</div>
+                        </div>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-4 border border-slate-100 shadow-none flex flex-col items-center text-center gap-3 opacity-70">
+                            <div
+                                class="w-20 h-20 rounded-full bg-slate-200 border-4 border-slate-100 flex items-center justify-center mb-1 relative grayscale">
+                                <span class="material-symbols-outlined text-4xl text-slate-400">groups</span>
+                                <div
+                                    class="absolute -bottom-1 -right-1 w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center border-2 border-slate-50">
+                                    <span class="material-symbols-outlined text-sm text-slate-500">lock</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-500 text-sm">Community Star</h4>
+                                <p class="text-xs text-slate-400 mt-1">Help 50 other learners</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Locked</div>
+                        </div>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-4 border border-slate-100 shadow-none flex flex-col items-center text-center gap-3 opacity-70">
+                            <div
+                                class="w-20 h-20 rounded-full bg-slate-200 border-4 border-slate-100 flex items-center justify-center mb-1 relative grayscale">
+                                <span class="material-symbols-outlined text-4xl text-slate-400">verified</span>
+                                <div
+                                    class="absolute -bottom-1 -right-1 w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center border-2 border-slate-50">
+                                    <span class="material-symbols-outlined text-sm text-slate-500">lock</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-500 text-sm">Sign Legend</h4>
+                                <p class="text-xs text-slate-400 mt-1">Reach Level 20</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Locked</div>
+                        </div>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-4 border border-slate-100 shadow-none flex flex-col items-center text-center gap-3 opacity-70">
+                            <div
+                                class="w-20 h-20 rounded-full bg-slate-200 border-4 border-slate-100 flex items-center justify-center mb-1 relative grayscale">
+                                <span class="material-symbols-outlined text-4xl text-slate-400">calendar_month</span>
+                                <div
+                                    class="absolute -bottom-1 -right-1 w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center border-2 border-slate-50">
+                                    <span class="material-symbols-outlined text-sm text-slate-500">lock</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-500 text-sm">30 Day Streak</h4>
+                                <p class="text-xs text-slate-400 mt-1">Practice for a month straight</p>
+                            </div>
+                            <div class="mt-auto pt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                Locked</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="lg:col-span-1 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800">Earned Certificates</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="group bg-white p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-16 h-20 bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center shrink-0 relative overflow-hidden group-hover:bg-blue-50 transition-colors">
+                                    <span
+                                        class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary transition-colors">description</span>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-200/50 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="flex-1 min-w-0 flex flex-col justify-center">
+                                    <h4 class="font-bold text-slate-900 truncate">Basics of ISL</h4>
+                                    <p class="text-xs text-slate-500 mb-2">Completed on Oct 12, 2023</p>
+                                    <span
+                                        class="text-primary text-xs font-bold flex items-center gap-1 group-hover:underline">
+                                        <span class="material-symbols-outlined text-sm">download</span> Download PDF
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-white p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-16 h-20 bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center shrink-0 relative overflow-hidden group-hover:bg-blue-50 transition-colors">
+                                    <span
+                                        class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary transition-colors">description</span>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-200/50 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="flex-1 min-w-0 flex flex-col justify-center">
+                                    <h4 class="font-bold text-slate-900 truncate">Family &amp; Relations</h4>
+                                    <p class="text-xs text-slate-500 mb-2">Completed on Nov 05, 2023</p>
+                                    <span
+                                        class="text-primary text-xs font-bold flex items-center gap-1 group-hover:underline">
+                                        <span class="material-symbols-outlined text-sm">download</span> Download PDF
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center text-slate-400 gap-2">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                            <span class="text-sm font-medium">Complete "Numbers &amp; Time" <br /> to earn your next
+                                certificate!</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="h-10"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>

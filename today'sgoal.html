@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Daily Goal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem", // Adding 2xl for 32px or similar large rounding
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        /* Custom scrollbar for aesthetic purposes if needed */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen relative overflow-hidden flex items-center justify-center">
+    <!-- Background Layer (The "Home Screen") -->
+    <!-- We simulate a dashboard background that will be blurred -->
+    <div aria-hidden="true" class="absolute inset-0 z-0 bg-slate-50 overflow-hidden">
+        <!-- Sidebar placeholder -->
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage_v2.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <!-- Header placeholder -->
+        <div
+            class="absolute top-0 left-0 lg:left-64 right-0 h-20 bg-white border-b border-slate-200 flex items-center justify-between px-8">
+            <div class="h-10 w-48 bg-slate-100 rounded-lg"></div>
+            <div class="flex gap-4">
+                <div class="h-10 w-10 bg-slate-100 rounded-full"></div>
+                <div class="h-10 w-10 bg-slate-100 rounded-full"></div>
+            </div>
+        </div>
+        <!-- Main Content Area Placeholder -->
+        <div
+            class="absolute top-20 left-0 lg:left-64 right-0 bottom-0 p-8 grid grid-cols-1 lg:grid-cols-3 gap-6 overflow-y-auto">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="h-64 bg-slate-200 rounded-2xl w-full"></div> <!-- Hero banner -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="h-40 bg-white rounded-xl shadow-sm border border-slate-100"></div>
+                    <div class="h-40 bg-white rounded-xl shadow-sm border border-slate-100"></div>
+                </div>
+            </div>
+            <div class="lg:col-span-1 space-y-6">
+                <div class="h-full bg-white rounded-2xl shadow-sm border border-slate-100"></div>
+            </div>
+        </div>
+        <!-- The Blur Overlay -->
+        <div class="absolute inset-0 bg-slate-900/30 backdrop-blur-md z-10 transition-all duration-500"></div>
+    </div>
+    <!-- Modal Content -->
+    <div class="relative z-20 w-full max-w-lg mx-4 animate-fade-in-up">
+        <div
+            class="bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden border border-white/50 flex flex-col p-8 gap-6 relative">
+            <!-- Decorative background blob for subtle color -->
+            <div
+                class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <!-- Header Section -->
+            <div class="relative flex flex-col items-center text-center gap-2">
+                <div class="flex items-center gap-2 px-3 py-1 bg-orange-50 rounded-full border border-orange-100">
+                    <span class="material-symbols-outlined text-orange-500 text-lg fill-1">local_fire_department</span>
+                    <span class="text-orange-700 text-sm font-bold tracking-wide uppercase">5 Day Streak</span>
+                </div>
+                <h1 class="text-3xl font-black text-slate-900 tracking-tight mt-2">Today's Goal</h1>
+                <p class="text-slate-500 font-medium">Keep your momentum going!</p>
+            </div>
+            <!-- Challenge Cards Container -->
+            <div class="flex flex-col gap-4 relative">
+                <!-- Card 1: Active -->
+                <div
+                    class="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-primary shrink-0">
+                        <span class="material-symbols-outlined text-2xl">school</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h3 class="font-bold text-slate-800 text-lg truncate">Complete 2 Lessons</h3>
+                            <span class="text-slate-900 font-bold bg-slate-100 px-2 py-0.5 rounded text-sm">0/2</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                            <div class="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
+                                style="width: 5%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: In Progress -->
+                <div
+                    class="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-primary shrink-0">
+                        <span class="material-symbols-outlined text-2xl">timer</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h3 class="font-bold text-slate-800 text-lg truncate">Practice for 10 min</h3>
+                            <span class="text-slate-900 font-bold bg-slate-100 px-2 py-0.5 rounded text-sm">4/10m</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                            <div class="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
+                                style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Locked -->
+                <div
+                    class="group flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100/60 opacity-80">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 rounded-xl bg-slate-200 text-slate-400 shrink-0">
+                        <span class="material-symbols-outlined text-2xl">lock</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h3 class="font-bold text-slate-500 text-lg truncate">Win a Quiz Game</h3>
+                            <span class="material-symbols-outlined text-slate-400 text-sm">lock</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                            <div class="bg-slate-300 h-2.5 rounded-full w-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reward Preview -->
+            <div class="flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-slate-400">Reward Preview</h2>
+                </div>
+                <div class="flex gap-4">
+                    <!-- XP Reward -->
+                    <div
+                        class="flex flex-1 flex-col items-center justify-center p-4 rounded-2xl bg-gradient-to-br from-yellow-50 to-orange-50 border border-orange-100/50">
+                        <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-amber-500 text-2xl fill-1">bolt</span>
+                        </div>
+                        <span class="text-slate-900 font-black text-xl">+50 XP</span>
+                        <span class="text-slate-500 text-xs font-medium">Experience</span>
+                    </div>
+                    <!-- Item Reward -->
+                    <div
+                        class="flex flex-1 flex-col items-center justify-center p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100/50 relative overflow-hidden group cursor-pointer">
+                        <div
+                            class="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded font-bold">Preview</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-indigo-500 text-2xl">checkroom</span>
+                        </div>
+                        <span class="text-slate-900 font-black text-xl">New Shirt</span>
+                        <span class="text-slate-500 text-xs font-medium">Accessory</span>
+                        <!-- Lock Overlay small icon -->
+                        <div class="absolute top-2 right-2 text-slate-400">
+                            <span class="material-symbols-outlined text-base">lock</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-4 mt-2">
+                <button
+                    class="w-full bg-primary hover:bg-blue-600 active:scale-[0.98] transition-all h-14 rounded-2xl text-white font-bold text-lg shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 group">
+                    <span>START CHALLENGE</span>
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+                <button class="w-full text-slate-400 hover:text-slate-600 font-medium text-sm py-2 transition-colors">
+                    Skip for now
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA - Sign-to-Text Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden">
+    <div class="flex h-screen w-full bg-background-light dark:bg-background-dark">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage_v2.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+            <!-- Header Area -->
+            <header
+                class="flex-shrink-0 px-8 py-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 z-10 flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">Sign-to-Text
+                        Translator</h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Translate ISL gestures into text in
+                        real-time or from recorded videos.</p>
+                </div>
+                <!-- Toggle Switch -->
+                <div class="bg-slate-100 dark:bg-slate-800 p-1 rounded-lg flex items-center">
+                    <button
+                        class="px-4 py-2 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">Live
+                        Camera</button>
+                    <button
+                        class="px-4 py-2 rounded-md text-sm font-bold bg-white dark:bg-slate-700 text-primary shadow-sm">Upload
+                        Video</button>
+                </div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-8">
+                <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 h-full min-h-[600px]">
+                    <!-- Left Column: Input / Video Source -->
+                    <div class="flex-1 flex flex-col gap-6">
+                        <!-- Upload Zone -->
+                        <div id="upload-zone"
+                            class="bg-white dark:bg-slate-800 rounded-xl border-2 border-dashed border-primary/30 hover:border-primary/60 transition-colors p-8 flex flex-col items-center justify-center text-center gap-4 group cursor-pointer relative shadow-sm min-h-[320px] overflow-hidden">
+                            <input type="file" id="video-input" accept="video/*" class="hidden">
+                            <!-- State: Default Upload -->
+                            <div id="upload-placeholder" class="flex flex-col items-center gap-4">
+                                <div
+                                    class="size-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Upload Video</h3>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm">Drag and drop your ISL video
+                                        here or <span
+                                            class="text-primary font-bold underline decoration-2 underline-offset-2">Browse
+                                            Files</span></p>
+                                </div>
+                                <p class="text-xs text-slate-400 dark:text-slate-500 font-medium mt-2">MP4, MOV, AVI up
+                                    to 200MB</p>
+                            </div>
+                            <!-- Video Preview (Hidden by default) -->
+                            <video id="video-preview"
+                                class="hidden absolute inset-0 w-full h-full object-cover rounded-xl" controls></video>
+                        </div>
+                        <!-- Processing Status -->
+                        <div id="processing-status"
+                            class="hidden bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center gap-4 transition-all">
+                            <div class="relative size-10 flex items-center justify-center">
+                                <svg class="animate-spin h-full w-full text-primary" fill="none" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-semibold text-slate-900 dark:text-white">Analyzing hand
+                                        gestures...</span>
+                                    <span id="progress-percent" class="text-xs font-bold text-primary">0%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2">
+                                    <div id="progress-bar"
+                                        class="bg-primary h-2 rounded-full w-[0%] transition-all duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Output / Translation -->
+                    <div class="flex-1 flex flex-col h-full">
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col h-full overflow-hidden">
+                            <!-- Output Header -->
+                            <div
+                                class="px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
+                                <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+                                    <span class="material-symbols-outlined text-xl">text_fields</span>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Translation Output</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <button
+                                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full text-slate-400 hover:text-primary transition-colors"
+                                        title="Copy Text">
+                                        <span class="material-symbols-outlined text-xl">content_copy</span>
+                                    </button>
+                                    <button
+                                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full text-slate-400 hover:text-primary transition-colors"
+                                        title="Listen">
+                                        <span class="material-symbols-outlined text-xl">volume_up</span>
+                                    </button>
+                                    <button
+                                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full text-slate-400 hover:text-primary transition-colors"
+                                        title="Share">
+                                        <span class="material-symbols-outlined text-xl">share</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Output Content -->
+                            <div id="output-container" class="flex-1 p-8 bg-white dark:bg-slate-800 flex flex-col">
+                                <!-- Placeholder state -->
+                                <div id="translation-placeholder"
+                                    class="flex-1 flex flex-col items-center justify-center text-slate-300 dark:text-slate-600">
+                                    <span class="material-symbols-outlined text-6xl mb-4 opacity-50">translate</span>
+                                    <p class="text-lg text-center">Upload a video to see translation...</p>
+                                </div>
+                                <!-- Active Translation State (Hidden by default) -->
+                                <div id="translation-result" class="hidden space-y-6">
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Recognized Sentence
+                                        </p>
+                                        <p id="translated-text"
+                                            class="text-3xl font-medium text-slate-900 dark:text-white leading-normal">
+                                            "Hello, how are you today?"
+                                        </p>
+                                    </div>
+                                    <div class="pt-6 border-t border-dashed border-slate-200 dark:border-slate-700">
+                                        <p class="text-xs font-bold text-slate-400 uppercase mb-3">Breakdown</p>
+                                        <div id="word-breakdown" class="flex flex-wrap gap-2">
+                                            <!-- Tokens will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bottom Action Bar -->
+                            <div
+                                class="p-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 flex justify-end">
+                                <button
+                                    class="flex items-center gap-2 bg-primary hover:bg-blue-600 text-white px-6 py-2.5 rounded-lg font-bold shadow-sm shadow-blue-200 dark:shadow-none transition-all active:scale-95">
+                                    <span class="material-symbols-outlined text-[20px]">play_arrow</span>
+                                    <span>Translate New Video</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const uploadZone = document.getElementById('upload-zone');
+            const videoInput = document.getElementById('video-input');
+            const videoPreview = document.getElementById('video-preview');
+            const uploadPlaceholder = document.getElementById('upload-placeholder');
+            const processingStatus = document.getElementById('processing-status');
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercent = document.getElementById('progress-percent');
+            const translationPlaceholder = document.getElementById('translation-placeholder');
+            const translationResult = document.getElementById('translation-result');
+            const translatedText = document.getElementById('translated-text');
+            const wordBreakdown = document.getElementById('word-breakdown');
+
+            uploadZone.addEventListener('click', () => {
+                videoInput.click();
+            });
+
+            videoInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    // Show video preview
+                    const videoUrl = URL.createObjectURL(file);
+                    videoPreview.src = videoUrl;
+                    videoPreview.classList.remove('hidden');
+                    uploadPlaceholder.classList.add('hidden');
+
+                    // Show processing status
+                    processingStatus.classList.remove('hidden');
+                    translationPlaceholder.classList.remove('hidden');
+                    translationResult.classList.add('hidden');
+
+                    simulateProcessing();
+                }
+            });
+
+            function simulateProcessing() {
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(interval);
+                        setTimeout(showTranslationResult, 500);
+                    }
+                    progressBar.style.width = progress + '%';
+                    progressPercent.textContent = Math.round(progress) + '%';
+                }, 300);
+            }
+
+            function showTranslationResult() {
+                processingStatus.classList.add('hidden');
+                translationPlaceholder.classList.add('hidden');
+                translationResult.classList.remove('hidden');
+
+                // Set sample result
+                translatedText.textContent = '"Welcome to MUDRA Sign Language Platform"';
+
+                const words = ["Welcome", "to", "MUDRA", "Sign", "Language", "Platform"];
+                wordBreakdown.innerHTML = '';
+                words.forEach((word, index) => {
+                    const span = document.createElement('span');
+                    span.className = index === 0
+                        ? "inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-100 dark:border-blue-800"
+                        : "inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300";
+                    span.textContent = word;
+                    wordBreakdown.appendChild(span);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

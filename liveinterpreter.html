@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Live ISL Chat Interface</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "primary-hover": "#206bc4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2433",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#2d3748",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div class="flex h-screen w-full overflow-hidden">
+        <!-- Left Sidebar -->
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col h-full min-w-0 bg-background-light dark:bg-background-dark relative">
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">sign_language</span>
+                    <span class="font-bold text-lg">MUDRA</span>
+                </div>
+                <button class="text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+            <!-- Status Bar -->
+            <div class="px-6 py-4 flex items-center justify-between">
+                <div
+                    class="flex items-center gap-3 bg-white dark:bg-surface-dark px-4 py-2 rounded-full shadow-sm border border-slate-100 dark:border-slate-700">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Connected - Live
+                        Interpreter</span>
+                </div>
+                <div
+                    class="hidden sm:flex text-sm text-slate-500 dark:text-slate-400 bg-white dark:bg-surface-dark px-3 py-1 rounded-lg border border-slate-100 dark:border-slate-700">
+                    Session ID: #MUD-8291
+                </div>
+            </div>
+            <!-- Content Split -->
+            <div class="flex-1 flex flex-col lg:flex-row gap-6 px-6 pb-6 min-h-0 overflow-hidden">
+                <!-- Video Area -->
+                <div class="flex-1 flex flex-col gap-4 min-h-0">
+                    <!-- Interpreter Video (Main) -->
+                    <div class="relative flex-1 bg-black rounded-2xl overflow-hidden shadow-lg group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Indian woman wearing professional attire signing in sign language"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzkC0Mombx2lMXQkSOXpteVK-dnUwZcdHqkeIzdVc6MyCaD76bAHQI5ahe4Y9ONgvoCbnf8YIcoQA2dGnOg4CljFITRoK7sWxdu6xjQOVpbdOtG9uLNEthVTnmP1RZKQpaB878XoO_wCZ2qq30dcFjvhqoNvS1c-G128xT9l6nSDnZ7TTPBpVqWQiEH-_UenoKAaQUDoUADKxZLbv2Mf4io-L2VDWAkNPoW5Z104nPTG81DiW1yZkkXG9RQZYTU8_Y5smvf1v7YNra");'>
+                        </div>
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        </div>
+                        <!-- Labels -->
+                        <div
+                            class="absolute top-4 left-4 bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-lg text-sm font-medium flex items-center gap-2">
+                            <span class="material-symbols-outlined text-base text-primary">translate</span>
+                            Interpreter: Anjali
+                        </div>
+                        <!-- User PIP (Self View) - Positioned bottom right inside main view for cleaner layout -->
+                        <div
+                            class="absolute bottom-4 right-4 w-32 sm:w-48 aspect-video bg-slate-800 rounded-xl overflow-hidden border-2 border-white/20 shadow-xl">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Self view of user looking at camera"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZNG05H4Mq9FmXXuhED1knlqFuSgCBOGVuvpU8MqOfOBwmQlFkW4d-RdiWIQ9IwfAspP-73vlizgVxwX2MqxPi4U_EscsG26KsT4Z1nK9GMHgzoAP6NsVigOhOXqPUMGLHBctxnZ63XOfIMNfuvNgHamcJ2ba0C562vflqkA-MAWlJ9ouGniQEfxcwc271L6hdwRQGkycu6ISNfHyD9yVO0QyYhZcV6Td68kbBXXzVRJ7fN2RkD8qzOwSt-vQPIG5xXq4_m94kfb3");'>
+                            </div>
+                            <div
+                                class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">
+                                You</div>
+                        </div>
+                    </div>
+                    <!-- Controls Bar -->
+                    <div
+                        class="bg-white dark:bg-surface-dark p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                        <button class="flex flex-col items-center gap-1 group min-w-[64px]">
+                            <div
+                                class="size-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 group-hover:bg-primary/10 group-hover:text-primary transition-all">
+                                <span class="material-symbols-outlined">mic_off</span>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Mute</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-1 group min-w-[64px]">
+                            <div
+                                class="size-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 group-hover:bg-primary/10 group-hover:text-primary transition-all">
+                                <span class="material-symbols-outlined">videocam_off</span>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Stop Video</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-1 group min-w-[64px]">
+                            <div
+                                class="size-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 group-hover:bg-primary/10 group-hover:text-primary transition-all">
+                                <span class="material-symbols-outlined">description</span>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Transcript</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-1 group min-w-[64px]">
+                            <div
+                                class="size-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 group-hover:bg-primary/10 group-hover:text-primary transition-all">
+                                <span class="material-symbols-outlined">switch_account</span>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Switch</span>
+                        </button>
+                        <div class="w-px h-10 bg-slate-200 dark:bg-slate-700 mx-2 hidden sm:block"></div>
+                        <button
+                            class="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl transition-colors shadow-lg shadow-red-500/20">
+                            <span class="material-symbols-outlined">call_end</span>
+                            <span class="font-bold">End Call</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Chat Panel -->
+                <div
+                    class="w-full lg:w-96 flex flex-col bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 overflow-hidden h-[500px] lg:h-auto">
+                    <div
+                        class="p-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
+                        <h2 class="font-bold text-lg text-slate-800 dark:text-white">Live Chat</h2>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-medium">Secure</span>
+                    </div>
+                    <div class="flex-1 overflow-y-auto p-4 space-y-6">
+                        <div class="flex justify-center">
+                            <span
+                                class="text-xs text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Session
+                                started at 10:00 AM</span>
+                        </div>
+                        <!-- Interpreter Message -->
+                        <div class="flex items-start gap-3">
+                            <div class="size-8 rounded-full bg-cover bg-center shrink-0"
+                                data-alt="Small avatar of interpreter Anjali"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPf365a7mAXPH1AKZjX0Czp9nMBnQph7_TLSAfamDVzLrY317Vcea5nG08pY0l50LDnO5Frt_YV48ATOVg10yxbYhU7AoEBZB0JgEzURq-h0Pmld3K-ZqmMlG_wB6kGFthK8NlgW6B7nXU2a2PtFy4z742ZCTzVHoZU50QYdpsI6CvbRihDLbl_YXkdRGpf71fS7-L78fzZtS4RvrH6-DF9RgVR3c_tuztFvOdEJVosBX8XS5kES9OPyPS2ac5r6EfyKZjEmMpXNY3");'>
+                            </div>
+                            <div class="flex flex-col gap-1 max-w-[85%]">
+                                <span class="text-xs text-slate-500 ml-1">Anjali (Interpreter)</span>
+                                <div
+                                    class="bg-slate-100 dark:bg-slate-700 p-3 rounded-2xl rounded-tl-none text-slate-800 dark:text-slate-200 text-base leading-relaxed">
+                                    Hello Soumya, I am Anjali. I'm ready to interpret for you. How can I help you today?
+                                </div>
+                            </div>
+                        </div>
+                        <!-- User Message -->
+                        <div class="flex items-start gap-3 flex-row-reverse">
+                            <div class="size-8 rounded-full bg-cover bg-center shrink-0"
+                                data-alt="Small avatar of user Soumya"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWPd51gggr8FOIKlkm-h7pSE0SUbE_xaXRfAwp2R182EZWuzYXJGUMOurIWOHR6mNiR0z3y6kxDx6dnomPrwzYhHxRPsptIC2qLRE0itjxV4x2naTvSlMyzd7_Rcy6-5-TlsMJTCkjz5ic7Oltkwq01opt3rYkfrG1iSvLdI-fRB-9xuIP0kn_Rn6AMQxxJBbS6qrBUx4-rPZL8jmaUfk5ofEOmOGyldD48zi3LgHj_AhDM7iPb--i2BvK3IB8FF_3PhH1D0GhqIrq");'>
+                            </div>
+                            <div class="flex flex-col gap-1 items-end max-w-[85%]">
+                                <span class="text-xs text-slate-500 mr-1">You</span>
+                                <div
+                                    class="bg-primary text-white p-3 rounded-2xl rounded-tr-none text-base leading-relaxed shadow-sm">
+                                    Hi Anjali! I need help translating this document for my bank appointment.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Interpreter Message -->
+                        <div class="flex items-start gap-3">
+                            <div class="size-8 rounded-full bg-cover bg-center shrink-0"
+                                data-alt="Small avatar of interpreter Anjali"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcIiwHfjN07nJWgJB9EnMezxKW-hPzdIJIT284HzXifmgLEy0iyJkv7sGnnsJ2rY7i3jU20IEwvo_jt9Hwvw5XHk2rxUOTQDEcu1ot67YlczQTY-VgD7ahTkuyIr2M3BFWZoaWMH8QDko63LexW8VVcRuAh-iUqw02FPlN9PZPNs9RmhuH-HWhfTF0624RYLA2C4OLLo6jmOFA8fXWJz3tPXeZwhBBpLekE-_G-AjwzPh--us_xmztgyTl62iPR5ZQxo64FyguNo5V");'>
+                            </div>
+                            <div class="flex flex-col gap-1 max-w-[85%]">
+                                <span class="text-xs text-slate-500 ml-1">Anjali (Interpreter)</span>
+                                <div
+                                    class="bg-slate-100 dark:bg-slate-700 p-3 rounded-2xl rounded-tl-none text-slate-800 dark:text-slate-200 text-base leading-relaxed">
+                                    Absolutely. Please hold the document up to the camera or use the upload button so I
+                                    can see it clearly.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Input Area -->
+                    <div class="p-4 border-t border-slate-100 dark:border-slate-700 bg-white dark:bg-surface-dark">
+                        <div class="relative">
+                            <input
+                                class="w-full pl-4 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary/50 transition-all"
+                                placeholder="Type a message..." type="text" />
+                            <button
+                                class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <div class="flex gap-2">
+                                <button
+                                    class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1">
+                                    <span class="material-symbols-outlined text-[20px]">attach_file</span>
+                                </button>
+                                <button
+                                    class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1">
+                                    <span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+                                </button>
+                            </div>
+                            <span class="text-[10px] text-slate-400">Press Enter to send</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA - Practice Mode</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2433",
+                        "soft-blue": "#e6f0fa",
+                        "soft-blue-darker": "#dbeafe",
+                        "sidebar-bg": "#f0f7ff",
+                        "text-main": "#1e293b",
+                        "text-muted": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(43, 124, 238, 0.1)',
+                        'glow': '0 0 15px rgba(43, 124, 238, 0.3)'
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #2b7cee;
+            --sidebar-text: #334155;
+            --sidebar-text-hover: #1e293b;
+        }
+    </style>
+    <!-- MediaPipe Holistic Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-hidden">
+    <div class="flex h-screen w-full overflow-hidden">
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage_v2.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <div class="flex-1 flex flex-col h-full overflow-hidden bg-white relative">
+            <header
+                class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                        <span>Practice</span>
+                        <span class="material-symbols-outlined text-[10px] text-slate-400">arrow_forward_ios</span>
+                        <span>Basic Greetings</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                        Namaste
+                        <span
+                            class="px-2.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-semibold border border-blue-100">Sign
+                            3 of 10</span>
+                    </h2>
+                </div>
+                <button aria-label="Exit Practice" onclick="window.location.href='learnsignlanguage_v2.html'"
+                    class="p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors group">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </header>
+            <main class="flex-1 p-4 lg:p-6 overflow-y-auto flex flex-col gap-6 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full min-h-[500px]">
+                    <div
+                        class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 shadow-soft group">
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/40 flex items-center gap-2 shadow-sm">
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-sm font-semibold text-slate-700">Instructor</span>
+                        </div>
+                        <div class="w-full h-full flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=2564&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-30 mix-blend-multiply"
+                            data-alt="Abstract 3D grid background representing a virtual space"></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-slate-900/10">
+                            <!-- Direct Video Path -->
+                            <video id="instructor_video" class="w-full h-full object-contain z-10" autoplay loop muted
+                                playsinline>
+                                <source src="Public_Transport.mp4" type="video/mp4">
+                                <source src="C:\Users\biswo\Downloads\Public_Transport.mp4" type="video/mp4">
+                                <source src="file:///C:/Users/biswo/Downloads/Public_Transport.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- Professional Error UI -->
+                            <div id="video_error"
+                                class="hidden absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6 bg-slate-900/90 text-white">
+                                <div class="bg-primary/20 p-3 rounded-full mb-4">
+                                    <span
+                                        class="material-symbols-outlined text-4xl text-primary animate-pulse">movie</span>
+                                </div>
+                                <h3 class="text-sm font-bold mb-1">Set Up Instructor Video</h3>
+                                <p class="text-[10px] text-slate-400 mb-4 px-4">Local video access is restricted by the
+                                    browser. To see the instructor:</p>
+
+                                <div
+                                    class="w-full max-w-[240px] bg-slate-800/50 border border-white/10 rounded-xl p-3 text-left">
+                                    <p class="text-[10px] text-white/90 leading-relaxed font-mono">
+                                        1. Move <span class="text-blue-400">Public_Transport.mp4</span><br>
+                                        &nbsp;&nbsp; into <span class="text-emerald-400">e:\MUDRA\</span><br>
+                                        2. Refresh this page
+                                    </p>
+                                </div>
+                            </div>
+
+                            <script>
+                                (function () {
+                                    const v = document.getElementById('instructor_video');
+                                    const err = document.getElementById('video_error');
+                                    v.onerror = () => err.classList.remove('hidden');
+                                    v.onplay = () => err.classList.add('hidden');
+                                    // Interaction requirement for some browsers
+                                    window.addEventListener('mousedown', () => v.play().catch(() => { }), { once: true });
+                                })();
+                            </script>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-0 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="flex gap-2 bg-white/90 backdrop-blur-md p-1.5 rounded-xl border border-slate-200 shadow-lg">
+                                <button class="p-2 rounded-lg hover:bg-slate-100 text-slate-700 transition-colors"
+                                    title="Slow Motion"
+                                    onclick="this.classList.toggle('bg-blue-100'); this.classList.toggle('text-blue-600');">
+                                    <span class="material-symbols-outlined">speed</span>
+                                </button>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 text-slate-700 transition-colors"
+                                    title="Rotate View"
+                                    onclick="this.classList.toggle('bg-blue-100'); this.classList.toggle('text-blue-600');">
+                                    <span class="material-symbols-outlined">360</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative rounded-3xl overflow-hidden bg-slate-900 border-4 border-white shadow-soft ring-1 ring-slate-100">
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 flex items-center gap-2">
+                            <span
+                                class="material-symbols-outlined text-red-500 text-[12px] animate-pulse">fiber_manual_record</span>
+                            <span class="text-sm font-semibold text-white">You (Live)</span>
+                        </div>
+                        <div class="w-full h-full bg-black flex items-center justify-center relative overflow-hidden">
+                            <div id="camera_loading"
+                                class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-slate-900/90 backdrop-blur-md text-white gap-6">
+                                <span id="loading_icon"
+                                    class="material-symbols-outlined text-5xl animate-spin text-primary">sync</span>
+                                <div class="text-center px-4">
+                                    <p class="text-lg font-bold tracking-tight mb-2" id="status_title">Initializing
+                                        Tracking</p>
+                                    <p class="text-sm text-slate-400 max-w-[250px] mx-auto mb-4" id="status_text">
+                                        Checking camera permissions...</p>
+                                    <select id="camera_select"
+                                        class="hidden w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-primary focus:outline-none mb-4">
+                                        <option value="">Select Camera</option>
+                                    </select>
+                                </div>
+                                <button id="start_btn"
+                                    class="hidden px-8 py-3 bg-primary hover:bg-blue-600 rounded-full font-bold shadow-lg transition-all transform hover:scale-105">
+                                    Start Camera
+                                </button>
+                            </div>
+                            <div id="camera_switch_overlay"
+                                class="absolute top-4 right-4 z-30 opacity-0 transition-opacity duration-300">
+                                <select id="active_camera_select"
+                                    class="bg-black/40 backdrop-blur-md border border-white/20 rounded-lg px-2 py-1 text-[10px] text-white focus:outline-none">
+                                </select>
+                            </div>
+                            <video id="input_video" class="absolute w-full h-full object-cover scale-x-[-1] opacity-0"
+                                playsinline muted></video>
+                            <canvas id="output_canvas" class="w-full h-full object-cover scale-x-[-1]"></canvas>
+                        </div>
+
+                        <div class="absolute bottom-6 right-6">
+                            <div
+                                class="relative w-24 h-24 flex items-center justify-center bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-xl">
+                                <svg class="w-full h-full transform -rotate-90 p-1" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" fill="transparent" r="40" stroke="#374151" stroke-width="8">
+                                    </circle>
+                                    <circle id="accuracy-ring" cx="50" cy="50" fill="transparent" r="40"
+                                        stroke="#10b981" stroke-dasharray="251.2" stroke-dashoffset="37.68"
+                                        stroke-linecap="round" stroke-width="8"
+                                        style="transition: stroke-dashoffset 0.5s ease;"></circle>
+                                </svg>
+                                <div class="absolute flex flex-col items-center">
+                                    <span id="accuracy-text"
+                                        class="text-2xl font-bold text-white leading-none">85%</span>
+                                    <span
+                                        class="text-[10px] text-slate-300 uppercase tracking-widest font-semibold mt-1">Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-24 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 pointer-events-none z-20">
+                    <div
+                        class="bg-white/95 backdrop-blur-md border border-blue-100 text-slate-700 px-6 py-4 rounded-2xl shadow-lg shadow-blue-900/5 text-center flex items-center justify-center gap-4">
+                        <div class="bg-blue-100 p-2 rounded-full text-primary">
+                            <span class="material-symbols-outlined text-xl">lightbulb</span>
+                        </div>
+                        <p class="text-base font-medium">Tip: Keep your fingers closer together for better accuracy.</p>
+                    </div>
+                </div>
+            </main>
+            <footer class="p-6 pb-8 border-t border-slate-100 bg-white z-30 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.05)]">
+                <div class="max-w-4xl mx-auto flex items-center justify-between">
+                    <button onclick="window.location.reload()"
+                        class="flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-all font-semibold border border-transparent">
+                        <span class="material-symbols-outlined">replay</span>
+                        Replay Avatar
+                    </button>
+                    <button onclick="window.location.href='practice complete.html'"
+                        class="relative flex items-center justify-center w-16 h-16 rounded-full bg-white border-4 border-red-500 hover:bg-red-50 transition-all group shadow-lg shadow-red-200">
+                        <span class="w-5 h-5 rounded bg-red-500 shadow-sm"></span>
+                        <div class="absolute -bottom-8 text-xs font-bold text-slate-500 uppercase tracking-wide">Stop
+                        </div>
+                    </button>
+                    <button onclick="window.location.href='practice complete.html'"
+                        class="flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-primary hover:bg-blue-600 text-white transition-all font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40">
+                        <span>Next Sign</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const videoElement = document.getElementById('input_video');
+        const canvasElement = document.getElementById('output_canvas');
+        const canvasCtx = canvasElement.getContext('2d');
+        const statusTitle = document.getElementById('status_title');
+        const statusText = document.getElementById('status_text');
+        const loadingOverlay = document.getElementById('camera_loading');
+        const startBtn = document.getElementById('start_btn');
+        const loadingIcon = document.getElementById('loading_icon');
+        const cameraSelect = document.getElementById('camera_select');
+        const activeCameraSelect = document.getElementById('active_camera_select');
+        const cameraSwitchOverlay = document.getElementById('camera_switch_overlay');
+
+        let currentStream = null;
+
+        function updateStatus(title, text, isError = false) {
+            console.log(`[Status] ${title}: ${text}`);
+            if (title) statusTitle.innerText = title;
+            if (text) statusText.innerText = text;
+
+            if (isError) {
+                statusTitle.classList.add('text-red-500');
+                loadingIcon.innerText = 'error';
+                loadingIcon.classList.remove('animate-spin', 'text-primary');
+                loadingIcon.classList.add('text-red-500');
+            }
+        }
+
+        async function getDevices() {
+            try {
+                const devices = await navigator.mediaDevices.enumerateDevices();
+                const videoDevices = devices.filter(device => device.kind === 'videoinput');
+
+                // Clear dropdowns
+                cameraSelect.innerHTML = '<option value="">Select Camera</option>';
+                activeCameraSelect.innerHTML = '';
+
+                videoDevices.forEach((device, index) => {
+                    const label = device.label || `Camera ${index + 1}`;
+                    const option = new Option(label, device.deviceId);
+                    const optionClone = new Option(label, device.deviceId);
+
+                    cameraSelect.add(option);
+                    activeCameraSelect.add(optionClone);
+
+                    // Auto-select integrated/built-in cameras
+                    if (!cameraSelect.value && (label.toLowerCase().includes('integrated') || label.toLowerCase().includes('built-in'))) {
+                        cameraSelect.value = device.deviceId;
+                        activeCameraSelect.value = device.deviceId;
+                    }
+                });
+
+                if (videoDevices.length > 1) {
+                    cameraSelect.classList.remove('hidden');
+                }
+            } catch (err) {
+                console.warn("Could not enumerate devices:", err);
+            }
+        }
+
+        // Check if browser is compatible
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            updateStatus("Incompatible Browser", "Your browser does not support camera access. Please use Chrome, Edge, or Firefox.", true);
+        }
+
+        // Check for Secure Context (Required for camera)
+        if (window.location.protocol === 'file:' || (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost')) {
+            updateStatus("Security Block", "Webcam access is restricted to HTTPS or localhost. Please use a local server like 'Live Server' in VS Code.", true);
+        }
+
+        function onResults(results) {
+            if (loadingOverlay.style.opacity !== '0') {
+                loadingOverlay.style.transition = 'opacity 0.5s';
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => loadingOverlay.style.display = 'none', 500);
+                cameraSwitchOverlay.classList.remove('opacity-0');
+            }
+
+            canvasCtx.save();
+            canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+            canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+            if (results.poseLandmarks) {
+                window.drawConnectors(canvasCtx, results.poseLandmarks, window.POSE_CONNECTIONS, { color: '#00FF00', lineWidth: 2 });
+                window.drawLandmarks(canvasCtx, results.poseLandmarks, { color: '#FF0000', lineWidth: 1, radius: 2 });
+            }
+            if (results.faceLandmarks) {
+                window.drawConnectors(canvasCtx, results.faceLandmarks, window.FACEMESH_TESSELATION, { color: '#C0C0C070', lineWidth: 1 });
+            }
+            if (results.leftHandLandmarks) {
+                window.drawConnectors(canvasCtx, results.leftHandLandmarks, window.HAND_CONNECTIONS, { color: '#CC0000', lineWidth: 3 });
+                window.drawLandmarks(canvasCtx, results.leftHandLandmarks, { color: '#00FF00', lineWidth: 1, radius: 2 });
+            }
+            if (results.rightHandLandmarks) {
+                window.drawConnectors(canvasCtx, results.rightHandLandmarks, window.HAND_CONNECTIONS, { color: '#00CC00', lineWidth: 3 });
+                window.drawLandmarks(canvasCtx, results.rightHandLandmarks, { color: '#FF0000', lineWidth: 1, radius: 2 });
+            }
+            canvasCtx.restore();
+        }
+
+        // Accuracy Simulation Logic
+        function updateAccuracyUI(percentage) {
+            const ring = document.getElementById('accuracy-ring');
+            const text = document.getElementById('accuracy-text');
+            if (ring && text) {
+                text.innerText = `${percentage}%`;
+                const circumference = 251.2;
+                const offset = circumference - (percentage / 100) * circumference;
+                ring.style.strokeDashoffset = offset;
+            }
+        }
+
+        const accuracyValues = [85, 34, 45, 67, 98, 78, 62, 35, 25];
+        let accIndex = 0;
+        setInterval(() => {
+            updateAccuracyUI(accuracyValues[accIndex]);
+            accIndex = (accIndex + 1) % accuracyValues.length;
+        }, 3000);
+
+        const holistic = new Holistic({
+            locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
+        });
+
+        holistic.setOptions({
+            modelComplexity: 1,
+            smoothLandmarks: true,
+            minDetectionConfidence: 0.5,
+            minTrackingConfidence: 0.5
+        });
+
+        holistic.onResults(onResults);
+
+        async function startTracking(deviceId = null) {
+            try {
+                if (currentStream) {
+                    currentStream.getTracks().forEach(track => track.stop());
+                }
+
+                updateStatus("Connecting", "Waking up the camera...");
+                loadingIcon.classList.add('animate-spin');
+
+                const constraints = {
+                    video: {
+                        deviceId: deviceId ? { exact: deviceId } : undefined,
+                        width: { ideal: 1280 },
+                        height: { ideal: 720 },
+                        facingMode: "user"
+                    }
+                };
+
+                currentStream = await navigator.mediaDevices.getUserMedia(constraints);
+                videoElement.srcObject = currentStream;
+
+                // Refresh device labels if they were empty
+                if (cameraSelect.options.length <= 1) await getDevices();
+
+                videoElement.onloadedmetadata = () => {
+                    videoElement.play();
+                    updateStatus("Loading AI", "Preparing tracking models...");
+
+                    const processFrame = async () => {
+                        if (!videoElement.paused && !videoElement.ended) {
+                            await holistic.send({ image: videoElement });
+                            requestAnimationFrame(processFrame);
+                        }
+                    };
+                    processFrame();
+                };
+
+            } catch (err) {
+                console.error("Critical Error:", err);
+                if (err.name === 'NotAllowedError') {
+                    updateStatus("Permission Denied", "Please allow camera access and refresh.", true);
+                } else if (err.name === 'OverconstrainedError') {
+                    // Try again without constraints if ideal fails
+                    startTracking();
+                } else {
+                    updateStatus("Camera Error", err.message, true);
+                }
+            }
+        }
+
+        startBtn.onclick = () => {
+            startBtn.classList.add('hidden');
+            startTracking(cameraSelect.value);
+        };
+
+        activeCameraSelect.onchange = () => {
+            startTracking(activeCameraSelect.value);
+        };
+
+        setTimeout(async () => {
+            if (loadingOverlay.style.display !== 'none') {
+                await getDevices();
+                startBtn.classList.remove('hidden');
+                updateStatus("Action Required", "Click 'Start Camera' below. You can also select which camera to use.");
+                loadingIcon.classList.remove('animate-spin');
+            }
+        }, 1500);
+
+        function resizeCanvas() {
+            canvasElement.width = canvasElement.clientWidth || 640;
+            canvasElement.height = canvasElement.clientHeight || 480;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Final attempt to auto-start
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(s => {
+                s.getTracks().forEach(t => t.stop());
+                startTracking();
+            })
+            .catch(() => {
+                getDevices();
+            });
+    </script>
+</body>
+
+</html>

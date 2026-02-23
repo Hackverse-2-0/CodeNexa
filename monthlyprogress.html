@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Progress Report Preview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "primary-dark": "#1a5bb8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .a4-page {
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .a4-page,
+            .a4-page * {
+                visibility: visible;
+            }
+
+            .a4-page {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col md:flex-row overflow-hidden">
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <main class="flex-1 overflow-y-auto h-screen bg-slate-100 dark:bg-black/20 relative">
+        <div class="max-w-5xl mx-auto px-4 py-8 md:py-10 flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <a class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1 text-sm font-medium"
+                            href="sessionhistory.html">
+                            <span class="material-symbols-outlined text-lg">arrow_back</span>
+                            Back to History
+                        </a>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Monthly Progress Report
+                    </h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1">October 2023 • Generated on Nov 1st</p>
+                </div>
+                <div class="flex gap-3">
+                    <button
+                        class="px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 shadow-sm">
+                        <span class="material-symbols-outlined">print</span>
+                        Print
+                    </button>
+                    <button
+                        class="px-5 py-2.5 rounded-lg bg-primary text-white font-medium hover:bg-primary-dark transition-colors flex items-center gap-2 shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined">download</span>
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+            <div class="w-full flex justify-center py-4">
+                <div class="a4-page bg-white p-12 text-slate-900 relative">
+                    <div class="flex justify-between items-start border-b-2 border-slate-100 pb-8 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined text-2xl">sign_language</span>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-bold text-slate-900 tracking-tight">MUDRA</h1>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Bridging
+                                    Silence</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="text-xl font-bold text-slate-800">Student Performance Report</h2>
+                            <p class="text-slate-500 text-sm mt-1">Report ID: #MR-2023-OCT-892</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl p-6 mb-10 border border-slate-100">
+                        <div class="grid grid-cols-3 gap-8">
+                            <div>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Student
+                                    Name</p>
+                                <p class="text-lg font-bold text-slate-800">Soumya</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
+                                    Proficiency Level</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-0.5 rounded text-xs font-bold bg-primary/10 text-primary">Level
+                                        12</span>
+                                    <span class="text-sm text-slate-600">Intermediate</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Date Range
+                                </p>
+                                <p class="text-slate-700 font-medium">Oct 01 - Oct 31, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-10 mb-10">
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                                Signs Learned per Week
+                            </h3>
+                            <div
+                                class="h-48 w-full bg-white border border-slate-100 rounded-lg relative flex items-end justify-between px-6 pb-6 pt-10">
+                                <div class="w-8 bg-blue-100 rounded-t-sm h-[40%] relative group">
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-600">
+                                        12</div>
+                                    <div class="absolute bottom-0 w-full bg-primary h-[60%] rounded-t-sm opacity-80">
+                                    </div>
+                                </div>
+                                <div class="w-8 bg-blue-100 rounded-t-sm h-[65%] relative group">
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-600">
+                                        18</div>
+                                    <div class="absolute bottom-0 w-full bg-primary h-[70%] rounded-t-sm opacity-80">
+                                    </div>
+                                </div>
+                                <div class="w-8 bg-blue-100 rounded-t-sm h-[55%] relative group">
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-600">
+                                        15</div>
+                                    <div class="absolute bottom-0 w-full bg-primary h-[50%] rounded-t-sm opacity-80">
+                                    </div>
+                                </div>
+                                <div class="w-8 bg-blue-100 rounded-t-sm h-[85%] relative group">
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-600">
+                                        24</div>
+                                    <div class="absolute bottom-0 w-full bg-primary h-[80%] rounded-t-sm opacity-80">
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute bottom-1 left-6 w-[calc(100%-3rem)] flex justify-between text-[10px] text-slate-400 font-medium">
+                                    <span>W1</span><span>W2</span><span>W3</span><span>W4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <span class="w-1.5 h-6 bg-indigo-500 rounded-full"></span>
+                                Accuracy by Category
+                            </h3>
+                            <div
+                                class="h-48 w-full bg-white border border-slate-100 rounded-lg relative flex items-center justify-center">
+                                <div
+                                    class="w-32 h-32 border border-slate-200 rounded-full relative flex items-center justify-center">
+                                    <div class="w-24 h-24 border border-slate-100 rounded-full absolute"></div>
+                                    <div class="w-16 h-16 border border-slate-100 rounded-full absolute"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <svg class="w-full h-full text-indigo-500 opacity-20" viewBox="0 0 100 100">
+                                            <polygon fill="currentColor" points="50,10 90,50 50,90 20,60"></polygon>
+                                        </svg>
+                                        <svg class="w-full h-full text-indigo-500 absolute top-0 left-0"
+                                            viewBox="0 0 100 100">
+                                            <polygon fill="none" points="50,10 90,50 50,90 20,60" stroke="currentColor"
+                                                stroke-width="2"></polygon>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="absolute -top-4 text-[10px] font-bold text-slate-600 bg-white px-1">Alphabets</span>
+                                    <span
+                                        class="absolute -bottom-4 text-[10px] font-bold text-slate-600 bg-white px-1">Family</span>
+                                    <span
+                                        class="absolute -right-8 text-[10px] font-bold text-slate-600 bg-white px-1">Greetings</span>
+                                    <span
+                                        class="absolute -left-6 text-[10px] font-bold text-slate-600 bg-white px-1">Numbers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-10">
+                        <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Achievements Unlocked
+                        </h3>
+                        <div class="flex gap-6">
+                            <div
+                                class="flex items-center gap-3 bg-amber-50 px-4 py-3 rounded-xl border border-amber-100 flex-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                                    <span class="material-symbols-outlined">military_tech</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Quick Learner</p>
+                                    <p class="text-xs text-slate-500">20 signs in 1 week</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-emerald-50 px-4 py-3 rounded-xl border border-emerald-100 flex-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Consistent</p>
+                                    <p class="text-xs text-slate-500">7 day streak</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-purple-50 px-4 py-3 rounded-xl border border-purple-100 flex-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                    <span class="material-symbols-outlined">favorite</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Dedication</p>
+                                    <p class="text-xs text-slate-500">5 hours practice</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12">
+                        <h3
+                            class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">auto_awesome</span>
+                            AI Insights &amp; Recommendations
+                        </h3>
+                        <div
+                            class="bg-blue-50/50 rounded-xl p-5 border border-blue-100 text-sm text-slate-700 leading-relaxed">
+                            <p class="mb-3">
+                                <span class="font-semibold text-primary">Great progress this month, Soumya!</span> Your
+                                retention rate for Alphabets is excellent at 98%.
+                            </p>
+                            <p class="mb-2 font-semibold text-slate-800">Areas for Improvement:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                                <li>Practice finger placement for numbers 6-9 to improve clarity.</li>
+                                <li>Speed up transitions between greeting phrases.</li>
+                                <li>Review "Family Relations" module to boost confidence in conversational signs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-12 left-12 right-12 flex justify-between items-end border-t border-slate-100 pt-6">
+                        <div class="flex gap-4 items-center">
+                            <div
+                                class="w-16 h-16 bg-white border border-slate-200 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-4xl text-slate-800">qr_code_2</span>
+                            </div>
+                            <div class="text-xs text-slate-400">
+                                <p>Scan to verify authenticity</p>
+                                <p>or view digital report.</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-primary font-bold">www.mudra-app.com</p>
+                            <p class="text-xs text-slate-400 mt-1">© 2023 MUDRA Accessibility Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
