@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA - Favorites</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden">
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage_v2.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <main class="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark h-screen overflow-hidden">
+        <header
+            class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-8 py-6 flex flex-col gap-6 shrink-0 z-20 shadow-sm">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">My Favorite Signs</h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-2">
+                        <span class="material-symbols-outlined filled text-red-500 text-sm">favorite</span>
+                        12 Signs Saved
+                    </p>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button
+                        class="p-2 text-slate-400 hover:text-primary transition-colors rounded-full hover:bg-slate-50 dark:hover:bg-slate-800"
+                        title="Help">
+                        <span class="material-symbols-outlined">help</span>
+                    </button>
+                    <button
+                        class="p-2 text-slate-400 hover:text-primary transition-colors rounded-full hover:bg-slate-50 dark:hover:bg-slate-800"
+                        title="Notifications">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="relative flex-1 max-w-lg">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+                    </div>
+                    <input
+                        class="block w-full pl-9 pr-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg leading-5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm transition-shadow shadow-sm"
+                        placeholder="Search your favorites..." type="text" />
+                </div>
+                <div class="relative">
+                    <button
+                        class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm transition-colors">
+                        <span class="text-slate-500 dark:text-slate-400">Sort by:</span>
+                        Recently Added
+                        <span class="material-symbols-outlined text-slate-400 text-lg">expand_more</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1 overflow-hidden">
+            <div class="flex-1 overflow-y-auto p-6 md:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border-2 border-primary/50 shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative overflow-hidden">
+                            <img alt="3D avatar demonstrating the sign for Friend"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYJHqwYu4U96AmKP3V4suqKxQ_64clf2ZrHNo_v_qQ7q5uIWXjYGOza4OeZR3v8zITycylLCelRuR-QcAnEWmdMqSNtrD-9GVk5o8NozOYSaPbS_ywn3vS3Vq5n3T5ULncqIgk2D6p9hTybJeYYYb5W7Ft6LIZdqWBd4vGlipHB_w5Oa6J2dhhX1TtK7enSNymfVNV7kVHK7sIaxk6Hpo5vx69gvMSj7gsGneOhV_5ntTy377PmNrwQoVAKqLgLstewFLqNrtvdYhu" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4 bg-primary/5 dark:bg-slate-800/50">
+                            <h3
+                                class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Friend</h3>
+                            <p class="text-xs text-slate-500 mt-1">Relationships</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 focus:opacity-100">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Family"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD04a5v4sriam2rOxUlQqHz0MnS8CRzWF3XIl8VJxNc2mG0VXacU6h-JziFZ0atgFvMHSo4MgJuDayOe-CofdzXXQzJ-K4nMmjYR_YqP4LzwD5tARgYin5WkDQDVUniMCgX8q97HmXNF2cRVNNVWdW6CsW8Al7D9FMg9M5fDXrJAOPunHOuB7H85R1vseZAU46fhbriJm6SSGfnjs70DHb3IOsZdEWnTqqRAeQ-_OPiQjKYq0QpaU7BAvz40fbz5diiWG7k8CiHFqVm" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Noun</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Family</h3>
+                            <p class="text-xs text-slate-500 mt-1">Core Vocabulary</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 focus:opacity-100">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Love"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFUZoqc1wTLZKf0g-3mJVNZlWSha1RU2mKAWd9W2FoJZWptzEFKxlaHk0Hiq38wSGopQwGel__sWuax8o5XWK8iSbeH2G9XHJ3tOWL3l6wbGOELPvF4xQk5P2q101FC-Wrw8FaGWgjUjGH7KAxuJjnWEqwg23Y1JXNiiwZ0VXMdEJ5kxhypFa1QzitIpNpxfBJbUlAPXZQvL7E5Putm_gTbKmgQeN5zjNJRw8nII1q8dI2ZW2uC8sCsAq-9NWwag1ynwGezFOOygg" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Verb</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Love</h3>
+                            <p class="text-xs text-slate-500 mt-1">Emotions</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 focus:opacity-100">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Hello"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_U4McHGmfOCgttmVo3gM2QfoQdJWKwfAiwCjATkCY4Ir9Cw67_3-VDCK4N6M5x8LlHEQ0X-BbKm9WhAFqxcWcvO7xqitSCmMXfAvxABjaQzZspLmLGsek9yoxugrncf2k5YRMTK9KMOg1qFyBmSP0qqxHKEQIRBS5YPPOMWmzCYL3LA-oNFYyx3WPTyyjaB0EUV-bIvamlVdNox9uTUDSZlhBpJxHrF3GubOpXxlGO4uSFX8e_8g1BKkbQcuWMsg3X9r-i0G2AOI" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Greeting</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Hello</h3>
+                            <p class="text-xs text-slate-500 mt-1">Common Phrases</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 focus:opacity-100">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Thank You"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzH9nn0kSFvcX65qvkXXOe-z16KiaWCHom2EMy2OWMM2rQAeS9HIqlTd9tfVnVHR40bzQ8d-9_9BHvexC4lTHxDtrM05rktc0H-7_kZmKnd4tp822QqsVuhGNVL9nzdA32GmFhsKtUhp7kaEONppV1Z0GhKSwWlgL5ibYydl3h6Rgww25raiztlsaD22lBFflRUwGgXrjpMNLUKnE9OaFn6ZmF4xAKVIZ9dcLpxZ1JkOjtbn60xkE57S9LJuIzq3qHeyB9vJLTjIGY" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Phrase</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Thank You</h3>
+                            <p class="text-xs text-slate-500 mt-1">Politeness</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden cursor-pointer hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                        <button
+                            class="absolute top-2 right-2 z-10 p-1.5 bg-white/90 dark:bg-slate-900/90 rounded-full shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 focus:opacity-100">
+                            <span class="material-symbols-outlined filled text-red-500 text-[20px]">favorite</span>
+                        </button>
+                        <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 relative">
+                            <img alt="3D avatar demonstrating the sign for Help"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6pXxwTa04b4A8m2MPMFX7WNLfAELn5Xcq5M2KD3lhippsMtCenApKuzbHyvTBwiWQx1-9cWCrHt5naxizKcVwCuuV7UVAgRYA0bQNUYezSSGUMXIcWax6LMDltgLlG-T2S6Q6I-fpkExC4rqKlYo7FFaOk4rtUC7z6_sGMkFj9dppD19zpU0UtduBdt9Rl9xvZBj09d2UeAMDGoG6daJDUGf-gCjB2fNwp0EuGk0PbosqiIDJWSbvWYQvUSuOnAQXlUZMz11tNTHM" />
+                            <div
+                                class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                                Verb</div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                Help</h3>
+                            <p class="text-xs text-slate-500 mt-1">Actions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-[400px] border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-y-auto flex-shrink-0 hidden xl:flex flex-col shadow-[-4px_0_15px_-3px_rgba(0,0,0,0.05)]">
+                <div class="p-6 pb-4">
+                    <div
+                        class="aspect-[4/3] rounded-2xl bg-slate-900 relative overflow-hidden shadow-lg border-2 border-slate-100 dark:border-slate-700 group">
+                        <img alt="Detail view of 3D avatar performing sign for Friend"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYJHqwYu4U96AmKP3V4suqKxQ_64clf2ZrHNo_v_qQ7q5uIWXjYGOza4OeZR3v8zITycylLCelRuR-QcAnEWmdMqSNtrD-9GVk5o8NozOYSaPbS_ywn3vS3Vq5n3T5ULncqIgk2D6p9hTybJeYYYb5W7Ft6LIZdqWBd4vGlipHB_w5Oa6J2dhhX1TtK7enSNymfVNV7kVHK7sIaxk6Hpo5vx69gvMSj7gsGneOhV_5ntTy377PmNrwQoVAKqLgLstewFLqNrtvdYhu" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button
+                                class="bg-primary/90 text-white rounded-full p-4 hover:scale-110 hover:bg-primary transition-all shadow-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-4xl filled">play_arrow</span>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex gap-2">
+                            <button
+                                class="bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm hover:bg-black/70 transition">0.5x</button>
+                            <button
+                                class="bg-primary text-white text-xs px-2 py-1 rounded backdrop-blur-sm font-bold">1.0x</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="flex gap-2">
+                            <button
+                                class="flex items-center gap-1 text-slate-500 hover:text-primary transition-colors text-sm font-medium p-1">
+                                <span class="material-symbols-outlined text-[20px]">replay</span>
+                                Replay
+                            </button>
+                            <button
+                                class="flex items-center gap-1 text-slate-500 hover:text-primary transition-colors text-sm font-medium p-1">
+                                <span class="material-symbols-outlined text-[20px]">slow_motion_video</span>
+                                Slow
+                            </button>
+                        </div>
+                        <button class="text-red-500 hover:text-red-600 transition-colors p-1" title="Unfavorite">
+                            <span class="material-symbols-outlined filled">favorite</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-6 pb-8 flex flex-col gap-6">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-4xl font-bold text-slate-900 dark:text-white">Friend</h2>
+                                <span class="inline-block mt-1 text-sm font-mono text-slate-400">/frend/ • Noun</span>
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs px-2 py-1 rounded font-medium border border-green-200 dark:border-green-800">Verified</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide">
+                            Definition</h4>
+                        <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                            A person with whom one has a bond of mutual affection. In ISL, fingers are interlocked or
+                            hooked to symbolize connection.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h4
+                            class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary">edit_note</span> Personal Notes
+                        </h4>
+                        <div class="relative">
+                            <textarea
+                                class="w-full bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-900/50 rounded-lg p-3 text-sm text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none resize-none"
+                                placeholder="Add a note for your personal study..."
+                                rows="3">Must remember the finger locking gesture!</textarea>
+                            <div class="absolute bottom-2 right-2 text-[10px] text-slate-400">Saved</div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <h4
+                            class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary">format_quote</span> Usage
+                            Example
+                        </h4>
+                        <p class="text-slate-600 dark:text-slate-300 italic">"She is my best <strong
+                                class="text-primary font-medium">friend</strong>."</p>
+                    </div>
+                </div>
+                <div
+                    class="mt-auto p-6 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800">
+                    <button
+                        class="w-full py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">bug_report</span>
+                        Report Issue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

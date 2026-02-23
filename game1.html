@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Sign Language Quiz Game</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "primary-content": "#ffffff",
+                        "primary-dark": "#1a5bb5",
+                        "primary-light": "#eef6ff",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex overflow-hidden">
+    <!-- Sidebar -->
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-y-auto bg-background-light dark:bg-background-dark relative">
+        <!-- Top decorative gradient -->
+        <div
+            class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none">
+        </div>
+        <div class="max-w-6xl mx-auto w-full px-8 py-8 flex flex-col gap-6 relative z-10 h-full">
+            <!-- Game Header Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-2">
+                <!-- Level Info & Progress -->
+                <div class="md:col-span-2 flex flex-col justify-center gap-3">
+                    <div class="flex items-end gap-3 mb-1">
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Level
+                            1: Basic Greetings</h2>
+                        <span
+                            class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-1">Question
+                            3/10</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+                            style="width: 30%"></div>
+                    </div>
+                </div>
+                <!-- Timer & Score Cards -->
+                <div class="flex gap-4 justify-end items-center">
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Score</span>
+                        <span class="text-3xl font-black text-primary">450</span>
+                    </div>
+                    <div class="h-12 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                    <div
+                        class="flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-white dark:bg-slate-800 shadow-sm border-2 border-primary/20 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/5"></div>
+                        <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Time</span>
+                        <span class="text-xl font-bold text-slate-900 dark:text-white font-mono">00:15</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Avatar Viewport Area -->
+            <div
+                class="flex-1 min-h-[400px] bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 relative overflow-hidden group">
+                <!-- Placeholder for 3D Avatar -->
+                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900"
+                    style="background-image: radial-gradient(circle at 50% 100%, rgba(43, 124, 238, 0.15) 0%, transparent 50%);">
+                    <!-- Abstract representation of an avatar if image fails to load or just for structure -->
+                    <div class="relative w-64 h-96 flex items-end justify-center">
+                        <img alt="3D humanoid avatar performing a sign language gesture with hands near chest"
+                            class="h-full w-auto object-contain drop-shadow-2xl opacity-90 mix-blend-multiply dark:mix-blend-normal"
+                            data-alt="3D humanoid avatar performing sign language gesture"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOwCP6N8MWMZGnDZoIfDsMCUyvNtN1ORhPvYHsKI0LWMzM-xQq8x7wnMdNl2Ab0o7ppgcVBBsLlIUm-XyeNysSXxjTf4Btujt7J7qnVbDD7RKSQj0oML1NhcMRoft9tDa-IoJ7HTVZICRpgkpFIYJKvkd8DIbHDoSU5rcZlxIMvTongva3qBNuue89OYjPpL7b6FghSzVfFic6WFZ25DKq7Sp55J7IvpWhtt-HO516Gy7T-r5O0pi3kVsDGssAtBDo9AGWScUQV-cz" />
+                    </div>
+                </div>
+                <!-- Overlay Controls -->
+                <div class="absolute top-6 left-6 right-6 flex justify-between items-start pointer-events-none">
+                    <div
+                        class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 pointer-events-auto">
+                        <p class="text-sm font-medium text-slate-600 dark:text-slate-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[20px]">visibility</span>
+                            Watch the gesture
+                        </p>
+                    </div>
+                    <button
+                        class="pointer-events-auto flex items-center gap-2 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm text-primary font-bold py-2 px-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 transition-all active:scale-95">
+                        <span class="material-symbols-outlined">replay</span>
+                        Replay
+                    </button>
+                </div>
+                <!-- Feedback Overlay (Hidden by default, shown for example state) -->
+                <!-- <div class="absolute inset-0 bg-green-500/10 flex items-center justify-center z-20 pointer-events-none animate-pulse">
+                    <span class="material-symbols-outlined text-green-600 text-9xl">check_circle</span>
+                 </div> -->
+            </div>
+            <!-- Quiz Interaction Area -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-auto md:h-40 mb-4">
+                <button
+                    class="group relative flex items-center p-4 md:p-6 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-200 text-left">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 font-bold mr-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        A</div>
+                    <span class="text-xl font-bold text-slate-800 dark:text-white">Hello</span>
+                </button>
+                <button
+                    class="group relative flex items-center p-4 md:p-6 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-200 text-left ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold mr-4 shadow-sm transition-colors">
+                        B</div>
+                    <span class="text-xl font-bold text-primary dark:text-primary-light">Thank You</span>
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-primary text-3xl opacity-100 transition-opacity">check_circle</span>
+                </button>
+                <button
+                    class="group relative flex items-center p-4 md:p-6 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-200 text-left">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 font-bold mr-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        C</div>
+                    <span class="text-xl font-bold text-slate-800 dark:text-white">Help</span>
+                </button>
+                <button
+                    class="group relative flex items-center p-4 md:p-6 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-200 text-left">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 font-bold mr-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        D</div>
+                    <span class="text-xl font-bold text-slate-800 dark:text-white">Sorry</span>
+                </button>
+            </div>
+            <!-- Footer / Hints -->
+            <div class="flex justify-between items-center text-slate-500 dark:text-slate-400 text-sm px-2">
+                <p>Select the correct meaning of the sign displayed above.</p>
+                <div class="flex gap-4">
+                    <button class="hover:text-primary flex items-center gap-1 transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">lightbulb</span>
+                        <span>Show Hint</span>
+                    </button>
+                    <button class="hover:text-red-500 flex items-center gap-1 transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">flag</span>
+                        <span>Report Issue</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

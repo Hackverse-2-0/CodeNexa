@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Help &amp; Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased">
+    <div class="relative flex h-screen w-full flex-row overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark">
+            <!-- Header / Search -->
+            <div
+                class="sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800 px-6 py-5 md:px-10">
+                <div
+                    class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">How can we help you?
+                        </h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Search documentation, tutorials, or
+                            FAQs.</p>
+                    </div>
+                    <div class="w-full md:w-auto md:min-w-[400px]">
+                        <div class="relative group">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="material-symbols-outlined text-slate-400">search</span>
+                            </div>
+                            <input
+                                class="block w-full pl-10 pr-3 py-3 border-none rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary placeholder:text-slate-400 sm:text-sm"
+                                placeholder="Ask a question (e.g. 'camera setup')" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-6 md:p-10">
+                <div class="max-w-5xl mx-auto space-y-10 pb-20">
+                    <!-- Topic Cards -->
+                    <section>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">topic</span>
+                            Top Support Topics
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Card 1 -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 dark:hover:border-primary/50 transition-all cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                                </div>
+                                <h4
+                                    class="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    Getting Started</h4>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Setup your account, configure your
+                                    camera, and begin translating your first signs.</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 dark:hover:border-primary/50 transition-all cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
+                                    <span class="material-symbols-outlined text-3xl">face</span>
+                                </div>
+                                <h4
+                                    class="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    Using the 3D Avatar</h4>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Customize your avatar settings and
+                                    understand how gesture recognition works.</p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 dark:hover:border-primary/50 transition-all cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
+                                    <span class="material-symbols-outlined text-3xl">model_training</span>
+                                </div>
+                                <h4
+                                    class="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    Practice Mode Guide</h4>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Learn how to score points, track
+                                    your progress, and improve accuracy.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- FAQ Section -->
+                    <section>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">quiz</span>
+                            Frequently Asked Questions
+                        </h3>
+                        <div class="flex flex-col gap-3">
+                            <!-- FAQ Item 1 -->
+                            <details
+                                class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 open:border-primary/20 dark:open:border-primary/20 shadow-sm">
+                                <summary
+                                    class="flex items-center justify-between p-5 font-medium cursor-pointer list-none text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-xl transition-colors">
+                                    <span class="text-lg">How do I calibrate my camera?</span>
+                                    <span
+                                        class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 text-slate-600 dark:text-slate-300">
+                                    <p>To calibrate your camera, go to Settings &gt; Camera Setup. Ensure you are in a
+                                        well-lit room and stand approximately 3-5 feet away from the device. Follow the
+                                        on-screen guides to align your body within the frame.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ Item 2 -->
+                            <details
+                                class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 open:border-primary/20 dark:open:border-primary/20 shadow-sm">
+                                <summary
+                                    class="flex items-center justify-between p-5 font-medium cursor-pointer list-none text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-xl transition-colors">
+                                    <span class="text-lg">What signs are currently supported?</span>
+                                    <span
+                                        class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 text-slate-600 dark:text-slate-300">
+                                    <p>MUDRA currently supports over 500 common Indian Sign Language (ISL) gestures,
+                                        including alphabets, numbers, and everyday phrases. We update our library
+                                        monthly with new signs based on community feedback.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ Item 3 -->
+                            <details
+                                class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 open:border-primary/20 dark:open:border-primary/20 shadow-sm">
+                                <summary
+                                    class="flex items-center justify-between p-5 font-medium cursor-pointer list-none text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-xl transition-colors">
+                                    <span class="text-lg">Is MUDRA compatible with mobile devices?</span>
+                                    <span
+                                        class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 text-slate-600 dark:text-slate-300">
+                                    <p>Yes, MUDRA is accessible via mobile web browsers on both iOS and Android.
+                                        However, for the best 3D avatar performance and camera tracking, we recommend
+                                        using a desktop or laptop computer.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+                    <!-- Video Tutorials -->
+                    <section>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">smart_display</span>
+                                Video Tutorials
+                            </h3>
+                            <a class="text-sm font-medium text-primary hover:text-blue-700" href="#">View all tutorials
+                                →</a>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Video 1 -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="relative aspect-video rounded-xl bg-slate-200 dark:bg-slate-700 overflow-hidden mb-3">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                        data-alt="Person sitting in front of computer learning sign language"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8q0t7SNcKoeKu1mBKeu3-UJR4aSItFaYRlUEYwxqBl3sGIYjIHNjTrenirUWewMnMi4gIULH1mx3bQDMw7SD8pKXjrjp-4XBxS4yo_VZaPJWQSAG-4jpK-5CTHs2Zh94bCBp9E8gzSniEKvE7z9391_PnJrK_QEhADvsSyOLRw5oVPyknQhJ-MoraA6793nD1tlFIbQGAzcWPHadIlS_UFVtbwwrwuH59wLF_GQ2F0p6FHLTJARKbYaXArAmon-e-S4WstCNGnCeS');">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                        <div
+                                            class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg group-hover:scale-110 transition-transform">
+                                            <span class="material-symbols-outlined text-2xl ml-1">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded font-medium">
+                                        02:15</div>
+                                    <div class="absolute top-2 left-2 flex gap-1">
+                                        <span
+                                            class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">ISL</span>
+                                        <span
+                                            class="bg-slate-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">CC</span>
+                                    </div>
+                                </div>
+                                <h5
+                                    class="font-medium text-slate-900 dark:text-white leading-tight mb-1 group-hover:text-primary">
+                                    Setting Up Your Workspace</h5>
+                            </div>
+                            <!-- Video 2 -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="relative aspect-video rounded-xl bg-slate-200 dark:bg-slate-700 overflow-hidden mb-3">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                        data-alt="Close up of hands doing sign language gesture"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHHVaebPNlDiwUp86CLdORsYaNI_kGjLBDugN3BQP66NXwRsFX_pxXw08TeDg7NAyUmUWp1MYitdXpVQmnvlzKy34SwikWZAy6cUd8nCwZXfp8tpzfH3IVD4FoQ8cyynk5iyb_rgRvgi8ZD_kzjrlF1Ffq4-L-2O8gxD2VefWEGvl6S8xkAeZRcgbajZzRtyKsCfWTeaEBG-ysNfgY6QQZywAbnCRTaEKfFCJPybydPGD_Xn12GqRhUWTKoBFF6kfX0WSimZazQT8B');">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                        <div
+                                            class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg group-hover:scale-110 transition-transform">
+                                            <span class="material-symbols-outlined text-2xl ml-1">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded font-medium">
+                                        04:30</div>
+                                    <div class="absolute top-2 left-2 flex gap-1">
+                                        <span
+                                            class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">ISL</span>
+                                        <span
+                                            class="bg-slate-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">CC</span>
+                                    </div>
+                                </div>
+                                <h5
+                                    class="font-medium text-slate-900 dark:text-white leading-tight mb-1 group-hover:text-primary">
+                                    Basic Gestures 101</h5>
+                            </div>
+                            <!-- Video 3 -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="relative aspect-video rounded-xl bg-slate-200 dark:bg-slate-700 overflow-hidden mb-3">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                        data-alt="3D avatar interface on a screen"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcnLjCRZnA7y2hquRDMKgv2n6uFfIc2yzpTUrJoVR2isx-r947iR3vWbr1eq1fhVefWTyxc55h-ACbwZSheF6ehoSvrs7vlDLjKlGMJ2iBCYXVB2w6wR3490bqOL6ASZis9l58hPNGrDGTyElIZkLJcf0Z7PdpHsZrEYVLYw9pOGCR2GnSxyN9Lc9NKn5AJLv1v6S4DDdWqNa18yTEyXUxyCByvCqb98xJ8jlsCqO510OyjJhfb0wbH-O8Y8sDCfGq-dXn2_-S3L_E');">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                        <div
+                                            class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg group-hover:scale-110 transition-transform">
+                                            <span class="material-symbols-outlined text-2xl ml-1">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded font-medium">
+                                        03:10</div>
+                                    <div class="absolute top-2 left-2 flex gap-1">
+                                        <span
+                                            class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">ISL</span>
+                                        <span
+                                            class="bg-slate-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">CC</span>
+                                    </div>
+                                </div>
+                                <h5
+                                    class="font-medium text-slate-900 dark:text-white leading-tight mb-1 group-hover:text-primary">
+                                    Customizing Your Avatar</h5>
+                            </div>
+                            <!-- Video 4 -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="relative aspect-video rounded-xl bg-slate-200 dark:bg-slate-700 overflow-hidden mb-3">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                        data-alt="Group of students learning together"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUjDDfLkn9KVWH1jp1CLpXbp4BL3eKAsbvYY5GLdk_6NHmCZTJe9Pm_qBGNF4OHyrVd9yFwaBvAP9zWQIFlaMPcNZ2AsYgcuawS0sYbztzH4Xh-dMvVQpz8Ua_2PLZtiV52ICwErrKfw3NoRyO-4TrQkaBz8RSxGG3C8rVMWhy_yY-3X6WkiRcaSgsZ4QEJRrVB0U7a_nkAtBioVi2V7OPW9HfGtUjqLE40WZidByFJNZmQa7z17MA-wwzWncFs4TkcI9xuuq-acrK');">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                        <div
+                                            class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg group-hover:scale-110 transition-transform">
+                                            <span class="material-symbols-outlined text-2xl ml-1">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded font-medium">
+                                        05:45</div>
+                                    <div class="absolute top-2 left-2 flex gap-1">
+                                        <span
+                                            class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">ISL</span>
+                                        <span
+                                            class="bg-slate-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">CC</span>
+                                    </div>
+                                </div>
+                                <h5
+                                    class="font-medium text-slate-900 dark:text-white leading-tight mb-1 group-hover:text-primary">
+                                    Practice Mode Tips</h5>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Contact & Support -->
+                    <section
+                        class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Form Side -->
+                            <div class="p-8 flex-1">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Still need help?</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Send us a message and we'll
+                                    get back to you within 24 hours.</p>
+                                <form class="space-y-4">
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Subject</label>
+                                        <select
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary">
+                                            <option>Technical Issue</option>
+                                            <option>Translation Feedback</option>
+                                            <option>Account Support</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
+                                        <textarea
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary placeholder:text-slate-400"
+                                            placeholder="Describe your issue..." rows="4"></textarea>
+                                    </div>
+                                    <button
+                                        class="bg-primary hover:bg-blue-600 text-white font-medium py-2.5 px-5 rounded-lg transition-colors w-full sm:w-auto"
+                                        type="button">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- Live Chat CTA Side -->
+                            <div
+                                class="bg-blue-50 dark:bg-slate-900/50 p-8 flex-1 flex flex-col justify-center items-center text-center border-t lg:border-t-0 lg:border-l border-slate-200 dark:border-slate-700">
+                                <div
+                                    class="w-16 h-16 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm mb-4">
+                                    <span class="material-symbols-outlined text-4xl">interpreter_mode</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Live ISL Interpreter
+                                    Support</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xs mb-6">Connect with a
+                                    certified sign language interpreter for real-time assistance via video call.</p>
+                                <button
+                                    class="flex items-center gap-2 bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold py-3 px-6 rounded-lg transition-colors shadow-md">
+                                    <span class="material-symbols-outlined">videocam</span>
+                                    Start Live Chat
+                                </button>
+                                <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Available Mon-Fri, 9am - 6pm
+                                    IST</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

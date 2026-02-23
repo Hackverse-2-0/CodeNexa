@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Global Leaderboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+    <div class="relative flex h-screen w-full bg-background-light dark:bg-background-dark overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage_v2.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col min-w-0 overflow-hidden relative">
+            <!-- Header -->
+            <header
+                class="flex-shrink-0 px-8 py-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800 z-10 sticky top-0">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 max-w-5xl mx-auto w-full">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Global Rankings
+                        </h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Compare your ISL progress with the
+                            community</p>
+                    </div>
+                    <!-- Toggle -->
+                    <div class="bg-slate-100 dark:bg-slate-800 p-1 rounded-lg inline-flex self-start md:self-auto">
+                        <label class="cursor-pointer">
+                            <input class="peer sr-only" name="period" type="radio" />
+                            <span
+                                class="block px-4 py-1.5 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:text-slate-900 dark:peer-checked:text-white peer-checked:shadow-sm transition-all duration-200">Weekly</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input checked="" class="peer sr-only" name="period" type="radio" />
+                            <span
+                                class="block px-4 py-1.5 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:text-slate-900 dark:peer-checked:text-white peer-checked:shadow-sm transition-all duration-200">All-Time</span>
+                        </label>
+                    </div>
+                </div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto px-4 md:px-8 pb-24">
+                <div class="max-w-5xl mx-auto w-full py-8">
+                    <!-- Top 3 Podium -->
+                    <div class="flex items-end justify-center gap-4 mb-12 min-h-[280px]">
+                        <!-- Rank 2 -->
+                        <div class="flex flex-col items-center group w-1/3 max-w-[200px]">
+                            <div class="relative mb-3">
+                                <div
+                                    class="absolute -top-3 -right-3 bg-slate-200 text-slate-600 size-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md z-10 border-2 border-white dark:border-slate-800">
+                                    2</div>
+                                <div
+                                    class="size-20 md:size-24 rounded-full border-4 border-slate-300 dark:border-slate-600 p-1 bg-white dark:bg-slate-800 shadow-lg">
+                                    <div class="w-full h-full rounded-full bg-cover bg-center"
+                                        data-alt="Profile picture of Rahul"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_IczZrmJS2iK4C0gIaWWhvWksuzO5O6DO6pd6Nx1m5Dya3wIi-O5EvyS1AuCi2ma6ju_9npIFsHefsw1u6vrYxUA_NWbxaJFE4VrwNi8_yXS-JtjeCg4hpV06_LeXsVp_C-rGEfTd-f6NQYNq2fLyqVyNpxjxyCUQstpUu5CjnYKMKlMHFEVko4fhqug7KF-IsRZ68AiJgGsDIE-gvBKuNXGm_-M_sTqz4oB4VlSWVyyUNtfDYxuyjWFSkz6mhivEC12PAvUqwFvd");'>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-800 rounded-xl p-4 w-full text-center shadow-sm border border-slate-100 dark:border-slate-700 relative overflow-hidden h-[160px] flex flex-col justify-end">
+                                <div class="absolute inset-x-0 bottom-0 h-1 bg-slate-300"></div>
+                                <h3 class="font-bold text-slate-900 dark:text-white truncate">Rahul</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Intermediate</p>
+                                <div class="text-primary font-bold text-lg">2,450 XP</div>
+                            </div>
+                        </div>
+                        <!-- Rank 1 -->
+                        <div class="flex flex-col items-center group w-1/3 max-w-[220px] z-10 -mb-4">
+                            <div class="relative mb-4">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-yellow-500 animate-bounce">
+                                    <span class="material-symbols-outlined text-4xl"
+                                        style="font-variation-settings: 'FILL' 1;">crown</span>
+                                </div>
+                                <div
+                                    class="size-28 md:size-32 rounded-full border-4 border-yellow-400 p-1 bg-white dark:bg-slate-800 shadow-xl ring-4 ring-yellow-400/20">
+                                    <div class="w-full h-full rounded-full bg-cover bg-center"
+                                        data-alt="Profile picture of Priya"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAI7RB5FcCtYMcv2BuC3SVmnBYFpg8nu4b0yrf2UMyWxViYTxYhsjkWFRG_gb0WOF4fC8gRFlNzkCDHTi_4Q7Z1DQfJuXbnmCBmsgWokwfQ36lEEjFUh4waoKp_1p43vbfb4OGvMxpFMnpBXCTPXZQGEvjLWBgV7RlnLqEOQZ_815EDBx5yJb_GSHxBoFdCmwoWKSl6e6SYfPqi4armUC8Kbjfk569JfAJDFqqnyGZeHeNoJJIMuHXWvyTF-oaOeo3HPThXsfh1EJm");'>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border-2 border-white dark:border-slate-800 whitespace-nowrap">
+                                    Top Learner
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-b from-primary/5 to-white dark:from-primary/10 dark:to-slate-800 rounded-t-xl rounded-b-xl p-5 w-full text-center shadow-lg border border-yellow-400/30 relative overflow-hidden h-[200px] flex flex-col justify-end">
+                                <div class="absolute inset-x-0 bottom-0 h-1.5 bg-yellow-400"></div>
+                                <h3 class="font-bold text-xl text-slate-900 dark:text-white truncate">Priya</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 mb-2">ISL Master</p>
+                                <div class="text-primary font-black text-2xl">2,800 XP</div>
+                            </div>
+                        </div>
+                        <!-- Rank 3 -->
+                        <div class="flex flex-col items-center group w-1/3 max-w-[200px]">
+                            <div class="relative mb-3">
+                                <div
+                                    class="absolute -top-3 -right-3 bg-orange-200 text-orange-800 size-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md z-10 border-2 border-white dark:border-slate-800">
+                                    3</div>
+                                <div
+                                    class="size-20 md:size-24 rounded-full border-4 border-orange-300 dark:border-orange-700 p-1 bg-white dark:bg-slate-800 shadow-lg">
+                                    <div class="w-full h-full rounded-full bg-cover bg-center"
+                                        data-alt="Profile picture of Ankit"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzyCXggAE_KDnnU1e2N9e01b66VdVEtfkRdvyqTFMjl22k-YMFZsEIfUGs-DQZLxU1xcpK85cPTuweCPBWHCpqxST96lvrcaDu8hamoS7y_oLpnoC0TYN_ZXh9aMFZXP40RN8Sr2snNqFJKDmQSUa6Li4KllDIMVKPOvwqRe-MieWc9giGstFcMNZ2BV0RxltecbJgun9JAc_ETprvEI4AE1y-jmslBcWdRAHTJOvF6kWpJnDB3ZoUe90ueEku8IDU5ZYqL9pToGOf");'>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-800 rounded-xl p-4 w-full text-center shadow-sm border border-slate-100 dark:border-slate-700 relative overflow-hidden h-[140px] flex flex-col justify-end">
+                                <div class="absolute inset-x-0 bottom-0 h-1 bg-orange-300"></div>
+                                <h3 class="font-bold text-slate-900 dark:text-white truncate">Ankit</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Expert</p>
+                                <div class="text-primary font-bold text-lg">2,300 XP</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- List Header -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-t-xl border border-slate-200 dark:border-slate-700 shadow-sm mt-8">
+                        <div
+                            class="grid grid-cols-12 gap-4 px-6 py-4 border-b border-slate-100 dark:border-slate-700 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                            <div class="col-span-1 text-center">Rank</div>
+                            <div class="col-span-5 md:col-span-6">Learner</div>
+                            <div class="col-span-3 md:col-span-3 text-center hidden sm:block">Mastery Level</div>
+                            <div class="col-span-6 sm:col-span-3 md:col-span-2 text-right">Total Score</div>
+                        </div>
+                        <!-- Rows -->
+                        <div class="flex flex-col divide-y divide-slate-100 dark:divide-slate-700">
+                            <!-- Row 4 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">4</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 4"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQKMurxS6PORHi3d4WwOuNmLaRI4Tv8Kuihh3cfFnTC1U9w2054sxpTl4HeuUQmZKdL4wxkBCi86DGjGTjmC-9IEHR19BB048pfadRoKMzzNh2vnGVDgM_HE8QFpnbdznqVBBa95PfOtysvyHZhRbMNoZnq9uUPSEu_K_8ulZ7_RHKVs3V_nVt1y3CkAaqt8XHMXxv65NBlB-9pU_Si1YZbOhkU3fzX-wKnLUop6IC29bFyrN8LOYGb6Z5Enbm02CmW0rYM31oVELh");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Vikram
+                                        Singh</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                                        Expert
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    2,100 XP</div>
+                            </div>
+                            <!-- Row 5 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">5</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 5"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2rG2N4zweoZmVg72vZ-0iviES0aI73Ak5Kp_HPqxKqp0yHaTHFqLRF3H9MGoULZZPH9T1xJ3aRpvqVecWvxVf96MGZgMW94BBEp4Tgi5bx_fEfAHHzYQw-n0OPweDg70p0a0GRZom3zjhkzZbaZyP7QYDOFmp-TiUivRUNdRO_rXWAS2h0v1-Ot5ZPUX5REYnmtH9udtoQ46DaVpl9-iERq4VEDvwcCN6LZvFv2-bJ6GlhkKqvgyjstxohrxZDI6lqmr6yDUGpsB_");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Neha
+                                        Gupta</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                        Intermediate
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    1,950 XP</div>
+                            </div>
+                            <!-- Row 6 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">6</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 6"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOjNbawuSWQ404r37DiQxhQhGI6hfe-ilGge529hXlDWHYaoaF05XHd6S6SBDvskhNkwQuioM2IZbz0tchejKHL7Rsyv3KxkwOg5cv0ZITaVAYiUxW_6h3czjXaJRLGjwOPK5N1AUjCvHcwH90XDhlllNF9X44CY--hxnK_syJR-C1LMUnwfeIyBc4sHxwtcmoNDA4uNFC6oCYO4H3RveWOG3GZsQTzJmqSmuD5LpBk-6jKmNNKLS1jKB-ljNzPoQnR3grPLX2etw4");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Arjun
+                                        Kumar</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                        Intermediate
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    1,800 XP</div>
+                            </div>
+                            <!-- Row 7 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">7</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 7"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHTj2nB68MHSLuojxqxZVybiFLFBR172OflLDsaqBoaZX-b9u0WPJTCBYQghDZtSjUTi4vkacfcsXZ5QPjx_Wdf4kRlxSRiNME9eBk_SunjrqEsuvFt1gZyYeiWgmU2_0XUUFjZgsBEZUuPxmSywa8eH4nKJvEXm-OZZ_OENhaEQ0aTFVGbcYNy8rhBKz56WO-G1ma47_iT1EiKK0S3qdIbGn_tZNqsuRcwy0_cukNeduKDfuvqhFxYXfFsKjL-3okOX-S0cYN6Yio");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Meera
+                                        Reddy</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                        Beginner
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    1,650 XP</div>
+                            </div>
+                            <!-- Row 8 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">8</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 8"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvuYqAzuNdelHtNPsiWNNUkAsJkiIkhC0CtcDtdGHGa3bsnX0xYklCPczfmUo4BcStZin8v3gp8in7Jzf5wJk2RXM_ECbDuzfhzNACijx_emjSeCqJnTwxqak3KKYlBpONX4GEvKF_BICQOoL1jxoSbEkRtiFpxivid2Hnbyc_-sp4BKm2w_CEjREmf1bxldylilsNYY-50mvaLG57K0sBn9ps3T5vL2zik29vH3l6v0hZtslKOksr9Mp2mpeNhdkn4ufQTNnpDpbL");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Kavya
+                                        Patel</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                        Beginner
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    1,500 XP</div>
+                            </div>
+                            <!-- Row 9 -->
+                            <div
+                                class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                <div class="col-span-1 text-center font-medium text-slate-500">9</div>
+                                <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0"
+                                        data-alt="Profile picture of User 9"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpkcy_7M2CTMSyszLTdwb9miqMA4E1ojO0kKY9fZJLQpIBzuXag3GnJmmEtNK3VT2lFxtrLnAB8stfNmfCMXOFoabRaubaVHcNYX6BvVKtUQByMKVuyYzfJXed3aUr5AQSy0oceQs29qtx6jq35Gyl2XBxDI-P9ZKxs-RWIGaqOWo0IBgW8uDPcZrDr7_JOTUOlBYKhHd1O1l2lotRi7YtKCJyXrx0D8Toq9YPFKLgENi7QWH0K1yoeJ_vfrr_iQqGUtNhRd_rApd1");'>
+                                    </div>
+                                    <span class="font-semibold text-slate-900 dark:text-white truncate">Rohan
+                                        Sharma</span>
+                                </div>
+                                <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                        Beginner
+                                    </span>
+                                </div>
+                                <div
+                                    class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-slate-600 dark:text-slate-300">
+                                    1,450 XP</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Break indicating many more rows -->
+                    <div class="py-4 text-center text-slate-400 text-sm italic">
+                        ...
+                    </div>
+                </div>
+            </div>
+            <!-- Sticky "My Rank" Footer -->
+            <div class="absolute bottom-6 left-0 right-0 z-20 px-4 md:px-8 pointer-events-none">
+                <div class="max-w-5xl mx-auto w-full pointer-events-auto shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+                    <div
+                        class="bg-slate-900 dark:bg-slate-700 text-white rounded-xl border border-slate-800 dark:border-slate-600 overflow-hidden relative">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                        <div class="grid grid-cols-12 gap-4 px-6 py-4 items-center">
+                            <div class="col-span-1 text-center font-bold text-slate-300">42</div>
+                            <div class="col-span-5 md:col-span-6 flex items-center gap-3">
+                                <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0 ring-2 ring-white/20"
+                                    data-alt="My Profile Picture"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdsTndrFZPaXqEWYxJuRQ5MclXQS7JAW1tTUD3Vy7rngVouudJFaTe-WLprI8MPVXSL33rXOdslMMEZEg1pdEwOMHjVx5VVXGVDVfcLERSZuw55nVwNhGKR9a9rWvgN8kqyOxkJIsgGiQc3EvFEPhrB1XyNPzdHDrBfnfJsUrR5DlyV2ILszFo9GOQdNXAlkqeGeOwOvuJopbgFtviQNgj_n7AUk9l48DXKFMDhDILV57iG7pn_nEuBfVG_ZrBFUW5n_SHkSrq7rzJ");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-white truncate">You (Soumya)</span>
+                                    <span class="text-xs text-slate-400 sm:hidden">Intermediate</span>
+                                </div>
+                            </div>
+                            <div class="col-span-3 md:col-span-3 hidden sm:flex justify-center">
+                                <span
+                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-600">
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div
+                                class="col-span-6 sm:col-span-3 md:col-span-2 text-right font-bold text-primary text-lg">
+                                1,250 XP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA - About Project</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        /* Custom scrollbar for sidebar if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col md:flex-row overflow-hidden">
+    <!-- Mobile Header -->
+    <header
+        class="md:hidden flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+            <div class="text-primary material-symbols-outlined" style="font-size: 32px;">sign_language</div>
+            <span class="text-xl font-bold tracking-tight">MUDRA</span>
+        </div>
+        <button class="p-2 text-slate-600 dark:text-slate-400">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </header>
+    <!-- Sidebar -->
+    <aside
+        class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+        <div class="flex flex-col gap-6 p-6 overflow-y-auto" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>
+                aside div::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <!-- Profile Section -->
+            <div class="flex items-center gap-3">
+                <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                    <div
+                        class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="dashboard.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="learnsignlanguage_v2.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                    <span class="text-sm font-medium">Learn Signs</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="ISLdictionary.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                    <span class="text-sm font-medium">Dictionary</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="practice.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                    <span class="text-sm font-medium">Practice</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="game.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                    <span class="text-sm font-medium">Games</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="videototext.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                    <span class="text-sm font-medium">Translator</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="globalranking.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                    <span class="text-sm font-medium">Leaderboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="about.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                    <span class="text-sm font-medium">About</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Actions -->
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="profile.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                <span class="text-sm font-medium">Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                href="settings.html">
+                <span
+                    class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                <span class="text-sm font-medium">Settings</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                sidebarLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                        link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                        const icon = link.querySelector('.material-symbols-outlined');
+                        if (icon) {
+                            icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                            icon.classList.add('text-blue-600');
+                        }
+                    }
+                });
+            });
+        </script>
+    </aside>
+    <!-- Main Content -->
+    <main
+        class="flex-1 h-[calc(100vh-60px)] md:h-screen overflow-y-auto bg-slate-50 dark:bg-slate-950 p-4 md:p-8 lg:p-12 scroll-smooth">
+        <div class="max-w-5xl mx-auto space-y-12 pb-20">
+            <!-- Breadcrumbs & Header -->
+            <div class="flex flex-col gap-6">
+                <nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                    <a class="hover:text-primary transition-colors" href="dashboard.html">Home</a>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-slate-900 dark:text-slate-200 font-medium">About MUDRA</span>
+                </nav>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-2">
+                            About MUDRA</h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">Bridging communication gaps with
+                            accessible, AI-driven Indian Sign Language technology.</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <button
+                            class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-lg shadow-primary/20 flex items-center gap-2">
+                            <span class="material-symbols-outlined">download</span>
+                            Download Whitepaper
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Image / Visual -->
+            <div class="relative w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-sm">
+                <img class="absolute inset-0 w-full h-full object-cover"
+                    data-alt="Group of diverse people communicating with sign language in a bright office"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOgpFFiNUKErqbs8Vd6o3f73HimmQ_OdBqITG9juF3PLrfjWWlXOzm_i06W4u6Mdl-LXsCqtspodFyv8QrFwk1FHFwx0z2R6U4Rkm4ZPX2HeYKwbtaVqNxkgKqlHDhM-fOeokI0IsvV7IFwX5Ucy772NhLUVELasqex9ug53TLJWhduOE273kQ9vmbfwdRp_2rxGs_SCrP2Lc8vE24asW_DzuQz2QsoIAWKln4mbzs1cu1yQPpCBxm0xb6fuDlpj3rWESJ-NnO343o" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8">
+                    <p class="text-white font-medium text-lg md:text-xl">Empowering conversations, one sign at a time.
+                    </p>
+                </div>
+            </div>
+            <!-- Mission Section -->
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <span class="uppercase tracking-widest text-primary font-bold text-xs mb-2 block">Our Mission</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white leading-tight">Communication is a
+                        fundamental right, not a privilege.</h2>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        MUDRA aims to empower the deaf and hard-of-hearing community by providing seamless, accessible,
+                        and real-time Indian Sign Language (ISL) translation tools.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        We leverage state-of-the-art computer vision to recognize hand gestures and translate them into
+                        text and speech, breaking down the barriers that have historically isolated the deaf community
+                        from the digital world.
+                    </p>
+                </div>
+            </section>
+            <!-- Impact Cards -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+                    <div
+                        class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">accessibility_new</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Accessibility First</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Designed with WCAG 2.1 standards to ensure usability for everyone, focusing on high contrast and
+                        screen reader compatibility.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+                    <div
+                        class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">AI Powered</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Cutting-edge machine learning models translate complex hand gestures into coherent text and
+                        speech instantly.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+                    <div
+                        class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">diversity_3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Community Driven</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Built in close collaboration with ISL linguistic experts and the deaf community to ensure
+                        authentic representation.
+                    </p>
+                </div>
+            </section>
+            <!-- Technology & Innovation Section -->
+            <section
+                class="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="flex-1 space-y-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary text-xs font-bold uppercase tracking-wide">
+                            <span class="material-symbols-outlined text-sm">science</span>
+                            Technology
+                        </div>
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Real-Time Hand Tracking &amp; 3D
+                            Avatars</h2>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            MUDRA goes beyond simple text-to-speech. We utilize advanced skeletal tracking to interpret
+                            subtle finger movements. Additionally, our platform features lifelike 3D avatars that can
+                            sign back to users, creating a complete two-way communication loop.
+                        </p>
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Low Latency Processing</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Optimized for web browsers to
+                                        run smoothly on any device.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Privacy Focused</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Video processing happens
+                                        locally on your device.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div
+                            class="relative rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 aspect-video shadow-lg border border-slate-200 dark:border-slate-700 group">
+                            <!-- Abstract representation of hand tracking technology -->
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                data-alt="Digital hand wireframe showing technological tracking points"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfgSsBv7n-A3Qdr9UEG5DrXSsDJ7hNq21XisikXi-zD1jhP2cDe9QvEgWyBe-ivav4eDdL1Uh06g0uss0rM023oskwtFdaQwZEQDUh4VWb_pzzosj_aqzFqLYmkaEt4s4HK0HWSYSIQUwu6ZDOKtYP6FcXg9-vo-GiwW035ndEAN-H9OeWxvRREmREkAiAkd9qcSY2Yw1AhVQzPIKWSwKNZSg8lFzznL7pcSN75PnHWcAKTUukkSIEkrBLv0idU43OPKSnQXbnqQUy" />
+                            <!-- Overlay UI elements mocking the app interface -->
+                            <div
+                                class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                                    <span class="text-xs font-mono uppercase text-slate-500 dark:text-slate-400">Live
+                                        Tracking Active</span>
+                                </div>
+                                <div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-2/3"></div>
+                                </div>
+                                <div
+                                    class="flex justify-between mt-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+                                    <span>Confidence: 98%</span>
+                                    <span>Gestures: 12/sec</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Bottom CTA / Footer Links -->
+            <div class="border-t border-slate-200 dark:border-slate-800 pt-8 mt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-left">
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-1">Want to contribute?</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Help us improve the dictionary or support
+                            the mission.</p>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a class="px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium"
+                            href="#">
+                            Documentation
+                        </a>
+                        <a class="px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium"
+                            href="#">
+                            Social Impact Report
+                        </a>
+                        <a class="px-5 py-2.5 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors text-sm font-medium"
+                            href="#">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-12 pb-4">
+                    <p class="text-xs text-slate-400 dark:text-slate-600">© 2024 MUDRA Project. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

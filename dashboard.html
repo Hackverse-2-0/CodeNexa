@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MUDRA Redesigned Landing Page</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb",
+                        "primary-dark": "#1d4ed8",
+                        "primary-light": "#eff6ff",
+                        "sidebar-bg": "#dbeafe",
+                        "sidebar-hover": "#bfdbfe",
+                        "surface-light": "#ffffff",
+                        "text-primary": "#1e3a8a",
+                        "text-secondary": "#475569",
+                    },
+                    fontFamily: {
+                        "display": ["Outfit", "sans-serif"],
+                        "body": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                    animation: {
+                        'spin-slow': 'spin 8s linear infinite',
+                        'pulse-glow': 'pulse-glow 2s infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-primary-light font-body text-text-primary antialiased overflow-hidden">
+    <div class="flex h-screen w-full overflow-hidden bg-primary-light">
+        <aside
+            class="w-64 flex-shrink-0 flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 h-full z-20">
+            <div class="flex flex-col gap-6 p-6 overflow-y-auto"
+                style="-ms-overflow-style: none; scrollbar-width: none;">
+                <style>
+                    aside div::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Profile Section -->
+                <div class="flex items-center gap-3">
+                    <div class="relative bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 shadow-sm border border-slate-200"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XBXafHP-hEfaJ0c0RGZVsQXZnhbrwVRrbHZR_KN2h0fQp_uIESQMbqF-OQ6HST9aeAhDtnBJoVqO42pxaqvn_q6ZVQUFjeaFb7asMOlSErk6sGhnJVGuy7piPIejRL1bMURlJfImFHJRrVeU_v8aPTmH9LppSpi1ljhGTMZvyx_h68VMAvv_PJoknFQHJff8CC-dJCoQyB8i_DsoxhhKU-P9p80aFgubZd2d5s7qBu4Dy5suBk9CSoq94wciTR_Ne8eoFHd9OXdS");'>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-900">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Soumya</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Student</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="dashboard.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="learnsignlanguage_v2.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">school</span>
+                        <span class="text-sm font-medium">Learn Signs</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="ISLdictionary.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">menu_book</span>
+                        <span class="text-sm font-medium">Dictionary</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="practice.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">sports_esports</span>
+                        <span class="text-sm font-medium">Practice</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="game.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">videogame_asset</span>
+                        <span class="text-sm font-medium">Games</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="videototext.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">translate</span>
+                        <span class="text-sm font-medium">Translator</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="globalranking.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">leaderboard</span>
+                        <span class="text-sm font-medium">Leaderboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                        href="about.html">
+                        <span
+                            class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">info</span>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="profile.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">person</span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800 transition-colors group"
+                    href="settings.html">
+                    <span
+                        class="material-symbols-outlined text-slate-500 group-hover:text-blue-600 transition-colors">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const currentUrl = window.location.pathname.split('/').pop() || 'dashboard.html';
+                    const sidebarLinks = document.querySelectorAll('aside nav a, aside div.p-6.border-t a');
+                    sidebarLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === currentUrl || (href === 'dashboard.html' && currentUrl === '')) {
+                            link.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-blue-50', 'dark:hover:bg-slate-800');
+                            link.classList.add('bg-blue-50', 'text-blue-600', 'dark:bg-slate-800', 'font-semibold');
+                            const icon = link.querySelector('.material-symbols-outlined');
+                            if (icon) {
+                                icon.classList.remove('text-slate-500', 'group-hover:text-blue-600');
+                                icon.classList.add('text-blue-600');
+                            }
+                        }
+                    });
+                });
+            </script>
+        </aside>
+        <main class="flex-1 flex flex-col relative h-full overflow-hidden bg-primary-light">
+            <header class="w-full flex justify-center pt-10 pb-6 relative z-10">
+                <div class="relative">
+                    <h1
+                        class="text-6xl md:text-8xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-indigo-900 drop-shadow-sm uppercase font-display select-none">
+                        MUDRA
+                    </h1>
+                    <div class="absolute -top-6 -right-8 opacity-20 animate-pulse">
+                        <span class="material-symbols-outlined text-6xl text-blue-400">sign_language</span>
+                    </div>
+                </div>
+            </header>
+            <div class="flex-1 flex flex-col items-center justify-start relative p-6 pb-10 overflow-y-auto">
+                <div
+                    class="relative w-full max-w-5xl h-[55vh] min-h-[500px] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 border border-blue-400/30 rounded-[2rem] shadow-2xl overflow-hidden mb-8 group ring-1 ring-white/20 perspective-[2000px]">
+                    <div
+                        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(56,189,248,0.2),rgba(255,255,255,0)_50%)] pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-40">
+                    </div>
+                    <div class="absolute top-6 right-6 flex gap-3 z-30">
+                        <div
+                            class="flex items-center bg-black/20 backdrop-blur-md rounded-xl border border-white/10 shadow-lg text-white/70 overflow-hidden">
+                            <button
+                                class="p-2 hover:bg-white/10 text-white/70 hover:text-white transition-colors border-r border-white/10 tooltip flex items-center justify-center w-10 h-10"
+                                title="Rotate View">
+                                <span class="material-symbols-outlined text-lg">360</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-white/10 text-white/70 hover:text-white transition-colors border-r border-white/10 flex items-center justify-center w-10 h-10"
+                                title="Zoom In">
+                                <span class="material-symbols-outlined text-lg">zoom_in</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-white/10 text-white/70 hover:text-white transition-colors flex items-center justify-center w-10 h-10"
+                                title="Zoom Out">
+                                <span class="material-symbols-outlined text-lg">zoom_out</span>
+                            </button>
+                        </div>
+                        <button
+                            class="p-2 bg-black/20 backdrop-blur-md rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-colors border border-white/10 shadow-lg w-10 h-10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-lg">view_in_ar</span>
+                        </button>
+                    </div>
+                    <div class="absolute top-6 left-6 z-30 pointer-events-none flex flex-col gap-3">
+                        <div
+                            class="px-3 py-1.5 bg-red-500/10 backdrop-blur-md rounded-full border border-red-500/20 shadow-sm text-[10px] text-red-400 font-black tracking-widest flex items-center gap-2 w-fit uppercase">
+                            <span class="flex h-2 w-2 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            </span>
+                            Live Canvas
+                        </div>
+                        <div
+                            class="px-3 py-1.5 bg-blue-500/10 backdrop-blur-md rounded-full border border-blue-500/20 w-fit text-[10px] text-blue-300 font-bold tracking-widest flex items-center gap-1.5 shadow-sm uppercase">
+                            <span class="material-symbols-outlined text-[14px]">gesture</span> Interactive
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full flex items-end justify-center pointer-events-none">
+                        <div id="speech-bubble"
+                            class="absolute top-20 md:top-32 right-[10%] md:right-[20%] animate-bounce duration-[3000ms] z-40">
+                            <div
+                                class="bg-white/90 backdrop-blur-xl border border-white/40 text-slate-800 px-5 py-3 rounded-2xl rounded-bl-none shadow-xl shadow-blue-900/20 relative max-w-[200px]">
+                                <p class="text-base font-bold flex items-center gap-2">Hello Soumya! <span
+                                        class="text-xl">👋</span></p>
+                                <div
+                                    class="absolute -bottom-2 left-0 w-4 h-4 bg-white/90 backdrop-blur-xl border-b border-r border-white/40 transform rotate-45 translate-x-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="relative z-10 w-full h-full flex items-end justify-center pb-0 perspective-[1000px] transform-style-3d">
+                            <div
+                                class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[50%] h-[30%] bg-blue-500/20 rounded-full blur-[80px] z-0">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[350px] h-[100px] bg-blue-400/10 rounded-[100%] blur-xl transform translate-y-4">
+                            </div>
+                            <div
+                                class="w-full h-full flex items-end justify-center relative z-20 group-hover:scale-[1.02] transition-transform duration-700 ease-out transform perspective-origin-bottom">
+                                <video id="trigger-video" class="hidden h-full max-h-[90%] object-contain relative z-10"
+                                    src="Publictransport.mp4" playsinline></video>
+                                <img id="avatar-img"
+                                    alt="3D humanoid avatar friendly robot performing a hand wave gesture with realistic rendering"
+                                    class="h-full max-h-[90%] object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChk2bkpgk9uXkbDLImQo_mGDzU3kkXjsKBtViB1CAVzNtpisWf0726i2GqEPPFfkI4HkWWuRPcrb0NHAP6lUIWcRfOu5Kb0yrdc9HzjgLIOFwHCSdA5rdnd-k8V9S3zU-fitS6TGdgmzTscYU9Tu2SYn2qNRPpeQz_QKpN2dgN9swcrh6QwH9EuitE2NuUiQSYwQJWXaedgSJJtz14-zqbhMisNrJ989Czc8GQk03lZMUIQspTNSE3-37QPghqmJ-rWsCBq2qvLdJG" />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 w-full px-6 py-4 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-sm flex justify-between items-center text-xs text-blue-200/70 font-medium z-30 border-t border-white/5">
+                        <div class="flex items-center gap-6">
+                            <span class="font-mono">Avatar_v2.0_WEBGL</span>
+                            <span class="flex items-center gap-1.5 text-blue-300"><span
+                                    class="material-symbols-outlined text-[14px]">3d_rotation</span> Orbital
+                                Controls</span>
+                        </div>
+                        <span
+                            class="text-green-400 flex items-center gap-1.5 bg-green-500/10 px-2 py-0.5 rounded-full border border-green-500/20"><span
+                                class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
+                            System Ready</span>
+                    </div>
+                </div>
+                <div class="w-full max-w-3xl px-4 relative z-20">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-0.5 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500 group-focus-within:opacity-70 animate-pulse-glow">
+                        </div>
+                        <div
+                            class="relative flex items-center bg-white/80 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl shadow-blue-900/5 overflow-hidden group-focus-within:bg-white transition-all h-[5.5rem]">
+                            <div class="pl-6 text-indigo-400 flex items-center">
+                                <span class="material-symbols-outlined text-[28px] animate-pulse">auto_awesome</span>
+                            </div>
+                            <input id="dashboard-search-input" aria-label="Input text to translate to sign language"
+                                class="w-full bg-transparent border-none text-slate-800 text-2xl font-medium placeholder:text-slate-400 focus:ring-0 h-full px-4"
+                                placeholder="Ask MUDRA to translate..." type="text" />
+                            <div class="flex items-center pr-3 gap-3">
+                                <button id="mic-button" aria-label="Use Microphone"
+                                    class="p-3 rounded-xl text-slate-500 hover:text-primary hover:bg-blue-50 transition-colors relative group/mic">
+                                    <span
+                                        class="material-symbols-outlined text-[28px] group-hover/mic:scale-110 transition-transform">mic</span>
+                                </button>
+                                <button onclick="window.location.href='videototext.html'"
+                                    class="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/40 active:scale-95 font-bold tracking-wide flex items-center gap-2 group/btn">
+                                    <span>TRANSLATE</span>
+                                    <span
+                                        class="material-symbols-outlined text-[20px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="voice-status" class="mt-2 text-center text-xs font-medium text-slate-500 h-4"></div>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-3 mt-8">
+                        <button onclick="window.location.href='videototext.html'"
+                            class="px-6 py-2.5 rounded-full bg-white border border-blue-100 text-slate-600 font-medium text-sm hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> How are you?
+                        </button>
+                        <button onclick="window.location.href='videototext.html'"
+                            class="px-6 py-2.5 rounded-full bg-white border border-blue-100 text-slate-600 font-medium text-sm hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Good Morning
+                        </button>
+                        <button onclick="window.location.href='videototext.html'"
+                            class="px-6 py-2.5 rounded-full bg-white border border-blue-100 text-slate-600 font-medium text-sm hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Thank you
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="md:hidden fixed bottom-0 w-full bg-white/90 backdrop-blur-lg border-t border-slate-200 p-2 flex justify-around z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] pb-safe">
+                <a class="flex flex-col items-center text-primary p-2 rounded-xl active:bg-blue-50"
+                    href="dashboard.html">
+                    <span class="material-symbols-outlined filled">home</span>
+                    <span class="text-[10px] mt-1 font-bold">Home</span>
+                </a>
+                <a class="flex flex-col items-center text-slate-400 p-2 rounded-xl active:bg-slate-50"
+                    href="learnsignlanguage.html">
+                    <span class="material-symbols-outlined">waving_hand</span>
+                    <span class="text-[10px] mt-1 font-medium">Learn</span>
+                </a>
+                <a class="flex flex-col items-center text-slate-400 p-2 rounded-xl active:bg-slate-50"
+                    href="practice.html">
+                    <span class="material-symbols-outlined">school</span>
+                    <span class="text-[10px] mt-1 font-medium">Practice</span>
+                </a>
+                <a class="flex flex-col items-center text-slate-400 p-2 rounded-xl active:bg-slate-50" href="game.html">
+                    <span class="material-symbols-outlined">sports_esports</span>
+                    <span class="text-[10px] mt-1 font-medium">Games</span>
+                </a>
+                <a class="flex flex-col items-center text-slate-400 p-2 rounded-xl active:bg-slate-50"
+                    href="profile.html">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-[10px] mt-1 font-medium">Profile</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let lastPressedKey = null;
+            const video = document.getElementById('trigger-video');
+            const avatar = document.getElementById('avatar-img');
+            const bubble = document.getElementById('speech-bubble');
+
+            const videoMap = {
+                'p': 'Publictransport.mp4',
+                'h': 'Horror.mp4',
+                'w': 'Woodpeaker.mp4',
+                'x': 'Xray.mp4',
+                'c': 'cylinder.mp4'
+            };
+
+            document.addEventListener('keydown', (e) => {
+                // Ignore if in input/textarea
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+                const key = e.key.toLowerCase();
+                if (videoMap[key]) {
+                    lastPressedKey = key;
+                    // Reset after 3 seconds if Enter isn't pressed
+                    setTimeout(() => {
+                        if (lastPressedKey === key) lastPressedKey = null;
+                    }, 3000);
+                } else if (e.key === 'Enter' && lastPressedKey) {
+                    e.preventDefault();
+                    if (video && avatar) {
+                        video.src = videoMap[lastPressedKey];
+                        avatar.classList.add('hidden');
+                        if (bubble) bubble.classList.add('hidden');
+                        video.classList.remove('hidden');
+                        video.play().catch(error => {
+                            console.error("Video play failed:", error);
+                            avatar.classList.remove('hidden');
+                            if (bubble) bubble.classList.remove('hidden');
+                            video.classList.add('hidden');
+                        });
+                        lastPressedKey = null;
+                    }
+                }
+            });
+
+            if (video) {
+                video.addEventListener('ended', () => {
+                    video.classList.add('hidden');
+                    avatar.classList.remove('hidden');
+                    if (bubble) bubble.classList.remove('hidden');
+                });
+            }
+
+            // Permanent Voice-to-Text Fix (High Resiliency)
+            const micBtn = document.getElementById('mic-button');
+            const searchInput = document.getElementById('dashboard-search-input');
+            const voiceStatus = document.getElementById('voice-status');
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+            if (SpeechRecognition && micBtn && searchInput) {
+                const recognition = new SpeechRecognition();
+                recognition.continuous = true;
+                recognition.lang = 'en-US';
+                recognition.interimResults = true;
+
+                let isListening = false;
+                let shouldBeListening = false;
+                let restartTimeout = null;
+
+                const startRecognition = () => {
+                    try {
+                        recognition.start();
+                    } catch (err) {
+                        console.error("Recognition start error:", err);
+                        // If already started, ignore. Otherwise, try again shortly.
+                        if (err.name !== 'InvalidStateError') {
+                            clearTimeout(restartTimeout);
+                            restartTimeout = setTimeout(startRecognition, 400);
+                        }
+                    }
+                };
+
+                micBtn.addEventListener('click', () => {
+                    if (isListening || shouldBeListening) {
+                        shouldBeListening = false;
+                        recognition.stop();
+                        if (voiceStatus) voiceStatus.textContent = 'Stopping...';
+                    } else {
+                        shouldBeListening = true;
+                        searchInput.value = '';
+                        startRecognition();
+                    }
+                });
+
+                recognition.onstart = () => {
+                    isListening = true;
+                    micBtn.classList.add('bg-red-50', 'text-red-500', 'animate-pulse', 'ring-4', 'ring-500/20');
+                    searchInput.placeholder = 'Listening... Speak clearly';
+                    if (voiceStatus) voiceStatus.textContent = 'Mic Active: Recording... (Click to Stop)';
+                };
+
+                recognition.onend = () => {
+                    isListening = false;
+
+                    // Permanent Fix: Use a delay before restarting to prevent browser lock-up
+                    if (shouldBeListening) {
+                        if (voiceStatus) voiceStatus.textContent = 'Reconnecting microphone...';
+                        clearTimeout(restartTimeout);
+                        restartTimeout = setTimeout(() => {
+                            if (shouldBeListening) startRecognition();
+                        }, 300);
+                        return;
+                    }
+
+                    micBtn.classList.remove('bg-red-50', 'text-red-500', 'animate-pulse', 'ring-4', 'ring-red-500/20');
+                    if (!searchInput.value) {
+                        searchInput.placeholder = 'Ask MUDRA to translate...';
+                        if (voiceStatus) voiceStatus.textContent = '';
+                    } else {
+                        if (voiceStatus) voiceStatus.textContent = 'Capture stopped.';
+                    }
+                };
+
+                recognition.onresult = (event) => {
+                    let finalTranscript = '';
+                    let interimTranscript = '';
+
+                    for (let i = 0; i < event.results.length; ++i) {
+                        if (event.results[i].isFinal) {
+                            finalTranscript += event.results[i][0].transcript;
+                        } else {
+                            interimTranscript += event.results[i][0].transcript;
+                        }
+                    }
+
+                    const transcript = finalTranscript + interimTranscript;
+                    if (transcript) {
+                        searchInput.value = transcript;
+                        if (voiceStatus) voiceStatus.textContent = 'Heard: ' + transcript;
+                        searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                };
+
+                recognition.onerror = (event) => {
+                    // Don't kill the session for minor errors
+                    if (event.error === 'aborted') return;
+                    if (event.error === 'no-speech') return; // Handled by onend + shouldBeListening
+
+                    console.error('Speech recognition error:', event.error);
+
+                    let errorMsg = '';
+                    if (event.error === 'not-allowed') {
+                        errorMsg = 'Mic permission denied.';
+                        shouldBeListening = false;
+                        isListening = false;
+                        micBtn.classList.remove('bg-red-50', 'text-red-500', 'animate-pulse', 'ring-4', 'ring-red-500/20');
+                        alert("Microphone permission blocked. Please check your browser's site settings (lock icon in address bar).");
+                    } else if (event.error === 'network') {
+                        errorMsg = 'Network issue. Trying to reconnect...';
+                        // Keep shouldBeListening = true to trigger onend restart
+                    } else {
+                        errorMsg = 'Status: ' + event.error;
+                    }
+
+                    if (voiceStatus) voiceStatus.textContent = errorMsg;
+                };
+            } else {
+                if (micBtn) {
+                    micBtn.title = "Speech recognition not supported (Use Chrome/Edge)";
+                    micBtn.addEventListener('click', () => {
+                        alert("Voice-to-text requires Google Chrome or Microsoft Edge.");
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
